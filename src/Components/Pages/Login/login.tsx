@@ -1,11 +1,6 @@
-import { observer } from "mobx-react";
 import { FC, useContext, useState } from "react";
-import { AuthContext } from "../../../../Context/context";
-
-import { IAuth } from "../../../../types/types";
-
-import MyButton from "../../../UI/MyButton/myButton";
-import MyInput from "../../../UI/MyInput/myInput";
+import { AuthContext } from "../../../Context/context";
+import { IAuth } from "../../../Types/types";
 
 const Login: FC = () => {
   const { isAuth, setIsAuth } = useContext(AuthContext) as IAuth;
@@ -29,22 +24,22 @@ const Login: FC = () => {
     <>
       <h1 style={{ display: "flex", justifyContent: "center" }}>Sign in </h1>
       <form onSubmit={login}>
-        <MyInput
+        <input
           type="text"
           placeholder="admin"
           value={admin}
           onChange={onChangeAdmin}
         />
-        <MyInput
+        <input
           type="password"
           placeholder="111"
           value={password}
           onChange={onChangePassword}
         />
-        <MyButton>Sign in</MyButton>
+        <button>Sign in</button>
       </form>
     </>
   );
 };
 
-export default observer(Login);
+export default Login;

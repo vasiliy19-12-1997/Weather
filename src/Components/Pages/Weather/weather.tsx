@@ -1,9 +1,10 @@
-import React from "react";
-
-type Props = {};
-
-const Weather = (props: Props) => {
-  return <div>Weather</div>;
+import { FC } from "react";
+import MyButton from "../../UI/MyButton/myButton";
+interface WeatherProps {
+  name?: string;
+}
+const Weather: FC = (props: WeatherProps) => {
+  return <></>;
 };
 
 export default Weather;

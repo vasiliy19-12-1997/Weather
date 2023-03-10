@@ -1,0 +1,13 @@
+.MyButton {
+  display: grid;
+  grid-template-columns: auto;
+
+  &B {
+    background: #09f;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+  }
+}

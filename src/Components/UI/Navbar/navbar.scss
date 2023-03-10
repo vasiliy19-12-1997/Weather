@@ -1,0 +1,10 @@
+.Navbar {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  &H {
+    display: grid;
+  }
+}
