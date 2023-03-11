@@ -1,21 +1,15 @@
 export interface IUserCities {
   city?: string;
-  temperature?: number;
+  temperature?: string;
   weather?: string;
   icon?: string;
 }
-export interface ICities {
-  city?: string;
-  temperature?: number;
-  weather?: string;
+export interface ICities extends IUserCities {
+  //ширина
+  lat?: number;
+  //долгота
+  lon?: number;
   id?: number;
-}
-export interface IForecast {
-  dayTemp?: number;
-  nightTemp?: number;
-  weather?: string;
-  icon?: string;
-  day?: string;
 }
 export interface IAuth {
   isAuth: boolean;

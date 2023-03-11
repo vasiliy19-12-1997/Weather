@@ -1,10 +1,14 @@
 import { FC } from "react";
-import MyButton from "../../UI/MyButton/myButton";
+import Navbar from "../../UI/Navbar/navbar";
 interface WeatherProps {
   name?: string;
 }
 const Weather: FC = (props: WeatherProps) => {
-  return <></>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default Weather;
