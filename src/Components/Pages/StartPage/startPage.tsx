@@ -4,7 +4,7 @@ import { useGeolocated } from "react-geolocated";
 import { observer } from "mobx-react-lite";
 import { store } from "../../../Store/store";
 
-const Weather: FC = () => {
+const StartPage: FC = () => {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -53,4 +53,4 @@ const Weather: FC = () => {
     <div>Getting the location data&hellip; </div>
   );
 };
-export default observer(Weather);
+export default observer(StartPage);
