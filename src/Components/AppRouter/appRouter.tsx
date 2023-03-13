@@ -19,7 +19,7 @@ const AppRouter: FC = () => {
       {publicRoutes.map((route) => (
         <Route element={<route.element />} path={route.path} key={route.path} />
       ))}
-      {/* если пользователь введет не существующий url, то перейдем к туду листу */}
+      {/* если пользователь введет не существующий url, то перейдем к login листу */}
       <Route path="/*" element={<Navigate to="/login" replace />} />
     </Routes>
   );

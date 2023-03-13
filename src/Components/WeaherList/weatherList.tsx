@@ -1,28 +1,62 @@
 import { observer } from "mobx-react-lite";
-import React, { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { ICities } from "../../Types/types";
-import WeatherCity from "../WeatherCity/weatherCity";
-
-type WeatherPageParams = {
-  cityId: string;
-};
+import { useEffect, useState } from "react";
+import { store } from "../../Store/store";
+import CityCard from "./../CityCard/cityCard";
 
 const WeatherList = () => {
-  const [city, setCity] = useState<ICities>({ city: "fdf", id: 122 });
-  const params = useParams<WeatherPageParams>();
-  const navigate = useNavigate();
+  const [city, setCity] = useState("");
+  useEffect(() => {
+    if (localStorage.getItem("cities")) {
+      store.setCities();
+    }
+  }, []);
+  const cities = store.cities.map((v) => {
+    return (
+      <CityCard
+        id={v.id}
+        lat={v.lat}
+        lon={v.lon}
+        city={v.city}
+        weather={v.weather}
+        temperature={v.temperature}
+        icon={v.icon}
+      />
+    );
+  });
   return (
-    <>
-      {params ? (
-        <WeatherCity
-          city={city}
-          onClick={(city) => navigate("/weather/" + city)}
+    <div>
+      <div>Weather List</div>
+      <form action="">
+        <input
+          type="text"
+          placeholder="Search for city"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
         />
-      ) : (
-        <WeatherList />
-      )}
-    </>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setCity("");
+            store.getCurrentCityWeather(city);
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 4v16m8-8H4"
+            />
+          </svg>
+        </button>
+      </form>
+      <div>{cities}</div>
+    </div>
   );
 };
 

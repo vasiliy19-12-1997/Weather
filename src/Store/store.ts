@@ -57,6 +57,9 @@ class Store {
       icon: day.weather[0].icon,
     }));
   };
+  setCities() {
+    this.cities = JSON.parse(localStorage.getItem("cities") || "{}");
+  }
 }
 
 export const store = new Store();
