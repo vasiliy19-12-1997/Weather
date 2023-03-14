@@ -9,7 +9,7 @@ import { ICardWeather, ICities, IUserCities } from "./../Types/types";
 class Store {
   userCity: IUserCities = {};
   cities: ICities[] = [];
-  currentCity: ICardWeather = {};
+  currentCity: ICardWeather[] = [];
 
   constructor() {
     makeAutoObservable(this);
@@ -59,6 +59,10 @@ class Store {
   };
   setCities() {
     this.cities = JSON.parse(localStorage.getItem("cities") || "{}");
+  }
+  deleteCities(id: number | undefined) {
+    this.cities = this.cities.filter((city) => city.id !== id);
+    localStorage.setItem("cities", JSON.stringify(this.cities));
   }
 }
 

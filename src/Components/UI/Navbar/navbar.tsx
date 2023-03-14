@@ -15,7 +15,7 @@ const Navbar: FC<NavbarProps> = () => {
           <Header>Weather</Header>
         </div>
         {/* <Header>Weather</Header> */}
-        <MyButton onClick={() => navigate("/weather/")}>Погода</MyButton>
+        <MyButton onClick={() => navigate("/weatherList/")}>Погода</MyButton>
         <MyButton>Новости</MyButton>
         <MyButton>Карты</MyButton>
         <MyButton>Информеры</MyButton>

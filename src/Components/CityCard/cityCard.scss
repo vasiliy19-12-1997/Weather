@@ -1,0 +1,22 @@
+.cityCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+
+  &Delete svg {
+    color: rgba(0, 0, 0, 0.25);
+    height: 75px;
+    width: 75px;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+  &Delete:hover svg {
+    transition: 0.3s ease;
+    color: rgba(0, 0, 0, 0.76);
+  }
+  &Delete button {
+    border: none;
+    background: transparent;
+  }
+}
