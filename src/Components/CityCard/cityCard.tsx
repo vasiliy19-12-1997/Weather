@@ -9,6 +9,11 @@ import "./cityCard.scss";
 type CityCardParams = {
   id: string;
 };
+
+type setType = {
+  city?: string;
+  set: React.Dispatch<React.SetStateAction<boolean>> | undefined;
+};
 const CityCard: FC<ICities> = ({
   id,
   city,
@@ -18,29 +23,26 @@ const CityCard: FC<ICities> = ({
   lat,
   lon,
 }) => {
-  const [cities, setCities] = useState(city);
+  // const [cities, setCities] = useState<setType>(city);
   const Apikey = "d2cda96c7881426eff7d69f04226b87b";
   const navigate = useNavigate();
   const params = useParams<CityCardParams>();
-  const fethcCities = async () => {
-    try {
-      const response = await axios.get<ICities>(
-        `weather?lat=${lat}&lon=${lon}&appid=${Apikey}` + params.id
-      );
-      setCities(response.data);
-    } catch (error) {
-      alert(error);
-    }
-  };
-  useEffect(() => {
-    fethcCities();
-  }, []);
+  // const fethcCities = async () => {
+  //   try {
+  //     const response = await axios.get<ICities>(
+  //       `weather?lat=${lat}&lon=${lon}&appid=${Apikey}` + params.id
+  //     );
+  //     setCities(response.data);
+  //   } catch (error) {
+  //     alert(error);
+  //   }
+  // };
+  // useEffect(() => {
+  //   fethcCities();
+  // }, []);
 
   return (
-    <div
-      className="cityCard"
-      onClick={() => navigate("/weatherList/" + params.id)}
-    >
+    <div className="cityCard">
       <div key={id}>
         <p>{city} </p>
         <p> {weather}</p>

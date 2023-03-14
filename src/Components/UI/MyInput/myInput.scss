@@ -1,0 +1,13 @@
+.I {
+  display: grid;
+  grid-template-rows: 50px;
+  //   justify-content: center;
+  align-items: center;
+
+  &I {
+    border: 2px solid rgba($color: #8b5d5d, $alpha: 1);
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 10px;
+  }
+}

@@ -5,6 +5,6 @@ import WeatherCity from "./../WeatherCity/weatherCity";
 export const privateRoutes = [
   { path: "/weather", element: StartPage },
   { path: "/weatherList", element: WeatherList },
-  { path: "/weather/:city?", element: WeatherCity },
+  { path: "/weatherCity", element: WeatherCity },
 ];
 export const publicRoutes = [{ path: "/login", element: Login }];
