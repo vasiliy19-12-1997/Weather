@@ -3,7 +3,7 @@ import Navbar from "../../UI/Navbar/navbar";
 import { useGeolocated } from "react-geolocated";
 import { observer } from "mobx-react-lite";
 import { store } from "../../../Store/store";
-
+import "./startPage.scss";
 const StartPage: FC = () => {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
@@ -36,15 +36,15 @@ const StartPage: FC = () => {
   ) : coords ? (
     <>
       <Navbar />
-      <div>
+      <div className="StartPage">
+        <div className="StartPageTitle">Your current city</div>
         {loading ? (
           <div>{loading}</div>
         ) : (
-          <div>
+          <div className="StartPageCities">
             <p>{store.userCity.city}</p>
-            <p>{store.userCity.weather}</p>
-            <p>{store.userCity.temperature}</p>
-            <p>{store.userCity.temperature}</p>
+            <p>Today is weather: {store.userCity.weather}</p>
+            <p>Today is temperature: {store.userCity.temperature}</p>
           </div>
         )}
       </div>

@@ -1,13 +1,16 @@
 .I {
   display: grid;
   grid-template-rows: 50px;
-  //   justify-content: center;
   align-items: center;
-
+  margin-top: 20px;
   &I {
-    border: 2px solid rgba($color: #8b5d5d, $alpha: 1);
-    border-radius: 20px;
-    font-size: 25px;
+    height: 30px;
     padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    font-size: 16px;
+    color: #333;
+    font-size: 30px;
   }
 }

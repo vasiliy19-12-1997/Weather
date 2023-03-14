@@ -1,5 +1,4 @@
 import { FC, PropsWithChildren } from "react";
-import { ICities } from "../../../Types/types";
 import "./myButton.scss";
 interface MyButtonProps {
   value?: string;
