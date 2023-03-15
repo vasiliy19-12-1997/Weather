@@ -16,9 +16,9 @@ function App() {
     <AuthContext.Provider
       value={{ isAuth, setIsAuth, isLoading, setIsLoading }}
     >
-      <HashRouter>
+      <BrowserRouter>
         <AppRouter />
-      </HashRouter>
+      </BrowserRouter>
     </AuthContext.Provider>
   );
 }

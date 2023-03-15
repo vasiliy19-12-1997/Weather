@@ -1,19 +1,11 @@
-import axios from "axios";
 import { observer } from "mobx-react-lite";
-import { FC, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import { store } from "../../Store/store";
 import { ICities } from "../../Types/types";
+import MyButton from "../UI/MyButton/myButton";
 import "./cityCard.scss";
 
-type CityCardParams = {
-  id: string;
-};
-
-type setType = {
-  city?: string;
-  set: React.Dispatch<React.SetStateAction<boolean>> | undefined;
-};
 const CityCard: FC<ICities> = ({
   id,
   city,
@@ -23,23 +15,7 @@ const CityCard: FC<ICities> = ({
   lat,
   lon,
 }) => {
-  // const [cities, setCities] = useState<setType>(city);
-  const Apikey = "d2cda96c7881426eff7d69f04226b87b";
   const navigate = useNavigate();
-  const params = useParams<CityCardParams>();
-  // const fethcCities = async () => {
-  //   try {
-  //     const response = await axios.get<ICities>(
-  //       `weather?lat=${lat}&lon=${lon}&appid=${Apikey}` + params.id
-  //     );
-  //     setCities(response.data);
-  //   } catch (error) {
-  //     alert(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   fethcCities();
-  // }, []);
 
   return (
     <div className="cityCard">
@@ -51,7 +27,7 @@ const CityCard: FC<ICities> = ({
         </p>
         <p>{temperature}°C</p>
       </div>
-
+      <MyButton onClick={() => navigate("/city/" + id)}>get 4 days</MyButton>
       <div className="cityCardDelete">
         <button onClick={() => store.deleteCities(id)}>
           <svg

@@ -1,6 +1,5 @@
-import { FC, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { ICities } from "../../../Types/types";
+import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../Header/header";
 import MyButton from "../MyButton/myButton";
 import "./navbar.scss";
@@ -15,7 +14,7 @@ const Navbar: FC<NavbarProps> = () => {
           <Header>Weather</Header>
         </div>
         {/* <Header>Weather</Header> */}
-        <MyButton onClick={() => navigate("/weatherList/")}>Погода</MyButton>
+        <MyButton onClick={() => navigate("/weatherList")}>Погода</MyButton>
         <MyButton>Новости</MyButton>
         <MyButton>Карты</MyButton>
         <MyButton>Информеры</MyButton>

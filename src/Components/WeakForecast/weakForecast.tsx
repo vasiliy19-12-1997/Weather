@@ -1,3 +1,4 @@
+import { observer } from "mobx-react-lite";
 import { FC } from "react";
 
 interface WeakForecastProps {
@@ -28,4 +29,4 @@ const WeakForecast: FC<WeakForecastProps> = ({
   );
 };
 
-export default WeakForecast;
+export default observer(WeakForecast);
