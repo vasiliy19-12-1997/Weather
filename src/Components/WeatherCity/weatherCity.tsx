@@ -1,10 +1,10 @@
 import { observer } from "mobx-react-lite";
-import React, { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { store } from "../../Store/store";
 import WeakForecast from "../WeakForecast/weakForecast";
 
-const WeatherCity = () => {
+const WeatherCity: FC = () => {
   const condition = useLocation().state || null;
   useEffect(() => {
     if (condition) {
