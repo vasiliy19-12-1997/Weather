@@ -1,13 +1,14 @@
 .StartPage {
-  font-size: 5vmin;
-  font-weight: 400;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  background-color: #f9f8ea;
+  height: 50vh;
+
   &Cities {
     margin-top: 30px;
-    width: 55vw;
+    width: 45vw;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -15,15 +16,18 @@
     text-align: center;
     border-radius: 15px;
     box-shadow: 1px 1px 32px 2px rgba(34, 60, 80, 0.2);
+    background-color: #e0e0d8;
+
     & p {
-      color: #000000;
-      background: rgba(255, 255, 255, 0);
-      border-radius: 5px;
-      padding: 0 10px;
+      // font-size: 1.5rem;
+      // margin-bottom: 2rem;
+
+      & img {
+      }
     }
   }
   &Title {
-    color: #86a813;
-    font-size: 10vmin;
+    font-size: 2.5rem;
+    font-weight: bold;
   }
 }

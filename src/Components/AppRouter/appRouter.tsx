@@ -12,7 +12,7 @@ const AppRouter: FC = () => {
         <Route element={<route.element />} path={route.path} key={route.path} />
       ))}
       {/* если пользователь введет не существующий url, то перейдем к туду листу */}
-      <Route path="/*" element={<Navigate to="/weather" replace />} />
+      <Route path="/*" element={<Navigate to="/Weather" replace />} />
     </Routes>
   ) : (
     <Routes>

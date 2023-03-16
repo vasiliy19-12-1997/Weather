@@ -1,13 +1,15 @@
 .MyButton {
   display: grid;
   grid-template-columns: auto;
-  margin-top: 20px;
   &B {
     background: #09f;
     color: #fff;
-    padding: 10px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     border: none;
-    border-radius: 8px;
+    font-size: 1rem;
+  }
+  :hover {
+    background: rgb(128, 135, 139);
   }
 }

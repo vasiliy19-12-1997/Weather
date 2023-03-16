@@ -5,7 +5,7 @@ interface MyInputProps {
   onChange?: (query: React.ChangeEvent<HTMLInputElement> & string) => void;
   placeholder?: string;
   type?: string;
-  children: React.PropsWithChildren;
+  children?: React.PropsWithChildren;
 }
 
 const MyInput: FC<PropsWithChildren<MyInputProps>> = ({

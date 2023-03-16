@@ -1,10 +1,19 @@
 .Navbar {
-  display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 1fr 1fr;
-  align-items: center;
+  background-color: #e6e4d0;
+  // padding: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: flex;
+  position: sticky;
+
   justify-content: space-around;
-  gap: 20px;
+  align-items: center;
+
   &H {
-    display: grid;
+    display: flex;
+    color: #000;
+  }
+  &H :hover {
+    color: #0056b3;
   }
 }

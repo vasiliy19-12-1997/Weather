@@ -27,9 +27,7 @@ const CityCard: FC<ICities> = ({
         </p>
         <p>{temperature}°C</p>
       </div>
-      <MyButton onClick={() => navigate("/WeatherList/" + id)}>
-        get 4 days
-      </MyButton>
+
       <div className="cityCardDelete">
         <button onClick={() => store.deleteCities(id)}>
           <svg

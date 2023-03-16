@@ -34,12 +34,7 @@ const WeatherList = () => {
           placeholder="Search for city..."
           value={city}
           onChange={(e) => setCity(e.target.value)}
-        >
-          <img
-            src={`https://freesvg.org/img/detective_penguin.png`}
-            alt=""
-          ></img>
-        </MyInput>
+        ></MyInput>
 
         {/* <WeatherCityObserver /> */}
         <MyButton

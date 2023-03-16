@@ -42,8 +42,19 @@ const StartPage: FC = () => {
           <div>{loading}</div>
         ) : (
           <div className="StartPageCities">
-            <p>{store.userCity.city}</p>
-            <p>Today is weather: {store.userCity.weather}</p>
+            <p>
+              {store.userCity.city}
+              <hr />
+            </p>
+            <p>
+              Today is weather:
+              {store.userCity.weather}
+              <img
+                src={`http://openweathermap.org/img/wn/${store.userCity.icon}@2x.png`}
+                alt=""
+              />
+              <hr />
+            </p>
             <p>Today is temperature: {store.userCity.temperature}</p>
           </div>
         )}

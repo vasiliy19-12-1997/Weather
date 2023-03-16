@@ -7,7 +7,7 @@ export const getCurrentUserWeather = (lat: number, lon: number) => {
   return instance.get(`weather?lat=${lat}&lon=${lon}&appid=${Apikey}`);
 };
 export const getCurrentCityWeather = (city: string) => {
-  return instance.get(`weather?q=${city},ru&appid=${Apikey}`, {});
+  return instance.get(`weather?q=${city}&appid=${Apikey}`, {});
 };
 export const getWeekWeather = (lat: number, lon: number) => {
   return instance.get(
