@@ -41,6 +41,7 @@ const WeatherList = () => {
           ></img>
         </MyInput>
 
+        {/* <WeatherCityObserver /> */}
         <MyButton
           onClick={(e) => {
             e.preventDefault();

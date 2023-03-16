@@ -10,8 +10,11 @@ export const getCurrentCityWeather = (city: string) => {
   return instance.get(`weather?q=${city},ru&appid=${Apikey}`, {});
 };
 export const getWeekWeather = (lat: number, lon: number) => {
-  return instance.get(`forecast/hourly?${lat}&${lon}${Apikey}&cnt=3`, {});
+  return instance.get(
+    `onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,current&units=metric&appid=${Apikey}`,
+    {}
+  );
 };
-export const getCityFourDays = (city: string) => {
-  return instance.get(`forecast/hourly?q=${city}&appid=${Apikey}`, {});
-};
+// export const getCityFourDays = (city: string) => {
+//   return instance.get(`forecast/hourly?q=${city}&appid=${Apikey}`, {});
+// };
