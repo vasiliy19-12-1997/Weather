@@ -1,39 +1,66 @@
-.Navbar {
+#nav-icon2 {
+  display: flex;
+  // justify-content: space-around;
+  align-items: center;
   background-color: #e6e4d0;
-  // padding: 10px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  display: flex;
-  position: sticky;
-
-  justify-content: space-around;
-  align-items: center;
-  &Menu {
-    background-color: #fff;
-    border: none;
-    border-radius: 0.25rem;
-    box-shadow: 0px 8px 16px #b1b1b1;
-    display: none;
-    font-size: 1.2rem;
+}
+@media (max-width: 550px) {
+  #nav-icon6 {
+    width: 60px;
+    height: 45px;
+    position: relative;
+    transition-duration: 1s;
+    margin: 48px auto 12px auto;
+    cursor: pointer;
+  }
+  #nav-icon6 span {
+    height: 9px;
+    width: 60px;
+    background-color: #337ab7;
+    border-radius: 20px;
     position: absolute;
-    right: 1rem;
-    top: 4rem;
-    width: 20rem;
-    z-index: 30;
-    & span {
-      background-color: #333;
-      display: block;
-      height: 3px;
-      margin-bottom: 5px;
-      width: 25px;
-    }
+    transition-duration: 0.25s;
+    transition-delay: 0.25s;
   }
-
-  &H {
-    display: flex;
-    color: #000;
+  #nav-icon6 span:before {
+    left: 0;
+    position: absolute;
+    top: -18px;
+    height: 9px;
+    width: 60px;
+    background-color: #337ab7;
+    content: "";
+    border-radius: 20px;
+    transition-duration: 0.25s;
+    transition: transform 0.25s, top 0.25s 0.25s;
   }
-  &H :hover {
-    color: #0056b3;
+  #nav-icon6 span:after {
+    left: 0;
+    position: absolute;
+    top: 18px;
+    height: 9px;
+    width: 60px;
+    background-color: #337ab7;
+    content: "";
+    border-radius: 20px;
+    transition-duration: 0.25s;
+    transition: transform 0.25s, top 0.25s 0.25s;
+  }
+  #nav-icon6.open span {
+    transition-duration: 0.1s;
+    transition-delay: 0.25s;
+    background: transparent;
+  }
+  #nav-icon6.open span:before {
+    transition: top 0.25s, transform 0.25s 0.25s;
+    top: 0px;
+    transform: rotateZ(-45deg);
+  }
+  #nav-icon6.open span:after {
+    transition: top 0.4s, transform 0.25s 0.25s;
+    top: 0px;
+    transform: rotateZ(45deg);
   }
 }
