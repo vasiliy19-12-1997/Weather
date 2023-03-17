@@ -27,7 +27,7 @@ const StartPage: FC = () => {
   useEffect(() => {
     store.getCurrentUserWeather(lat, lon);
     setLoading(false);
-  }, [store.userCity.city]);
+  }, [store.userCity.city, lat, lon]);
 
   return !isGeolocationAvailable ? (
     <div>Your browser does not support Geolocation</div>
@@ -37,24 +37,21 @@ const StartPage: FC = () => {
     <>
       <Navbar />
       <div className="StartPage">
-        <div className="StartPageTitle">Your current city</div>
+        <div className="StartPageTitle">{store.userCity.city}</div>
         {loading ? (
           <div>{loading}</div>
         ) : (
           <div className="StartPageCities">
             <p>
-              {store.userCity.city}
-              <hr />
-            </p>
-            <p>
               Today is weather:
               {store.userCity.weather}
-              <img
-                src={`http://openweathermap.org/img/wn/${store.userCity.icon}@2x.png`}
-                alt=""
-              />
-              <hr />
             </p>
+            <img
+              src={`http://openweathermap.org/img/wn/${store.userCity.icon}@2x.png`}
+              alt=""
+            />
+            <hr />
+
             <p>Today is temperature: {store.userCity.temperature}</p>
           </div>
         )}

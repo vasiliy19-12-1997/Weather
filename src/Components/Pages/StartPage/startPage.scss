@@ -4,14 +4,12 @@
   justify-content: center;
   align-items: center;
   background-color: #f9f8ea;
-  height: 50vh;
+  height: 60vh;
 
   &Cities {
     margin-top: 30px;
     width: 45vw;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+
     background: rgba(0, 0, 0, 0.02);
     text-align: center;
     border-radius: 15px;
@@ -19,11 +17,7 @@
     background-color: #e0e0d8;
 
     & p {
-      // font-size: 1.5rem;
-      // margin-bottom: 2rem;
-
-      & img {
-      }
+      font-size: 1.3rem;
     }
   }
   &Title {

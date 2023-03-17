@@ -1,9 +1,9 @@
 import { observer } from "mobx-react-lite";
 import { useEffect, useState } from "react";
-import { store } from "../../Store/store";
-import MyInput from "../UI/MyInput/myInput";
-import CityCard from "./../CityCard/cityCard";
-import MyButton from "./../UI/MyButton/myButton";
+import { store } from "../../../Store/store";
+import MyInput from "../../UI/MyInput/myInput";
+import CityCard from "../../CityCard/cityCard";
+import MyButton from "../../UI/MyButton/myButton";
 import "./weatherList.scss";
 const WeatherList = () => {
   const [city, setCity] = useState("");

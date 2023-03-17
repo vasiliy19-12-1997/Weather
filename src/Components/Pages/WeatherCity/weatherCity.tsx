@@ -2,9 +2,9 @@ import { observer } from "mobx-react-lite";
 import { FC, useEffect, useState } from "react";
 import { useGeolocated } from "react-geolocated";
 import { useLocation } from "react-router-dom";
-import { store } from "../../Store/store";
-import Navbar from "../UI/Navbar/navbar";
-import WeakForecast from "./../WeakForecast/weakForecast";
+import { store } from "../../../Store/store";
+import Navbar from "../../UI/Navbar/navbar";
+import WeakForecast from "../../WeakForecast/weakForecast";
 
 const WeatherCity: FC = () => {
   const [lat, setLat] = useState(0);

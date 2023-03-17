@@ -18,17 +18,28 @@ const Navbar: FC<NavbarProps> = () => {
   };
   return (
     <>
-      <div className="Navbar">
+      <nav className="Navbar">
+        <div className="NavbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div className="NavbarH">
           <Header>Weather</Header>
         </div>
+        <div className="NavbarBurgerMenu">
+          <div className="NavbarEnd">
+            <MyButton onClick={() => navigate("/weatherList")}>
+              Search city
+            </MyButton>
+            <MyButton onClick={() => navigate("/weatherList")}>
+              Profile
+            </MyButton>
+            <MyButton onClick={logOut}>Log out</MyButton>
+          </div>
+        </div>
         {/* <Header>Weather</Header> */}
-        <MyButton onClick={() => navigate("/weatherList")}>
-          Search city
-        </MyButton>
-        <MyButton onClick={() => navigate("/weatherList")}>Profile</MyButton>
-        <MyButton onClick={logOut}>Log out</MyButton>
-      </div>
+      </nav>
     </>
   );
 };
