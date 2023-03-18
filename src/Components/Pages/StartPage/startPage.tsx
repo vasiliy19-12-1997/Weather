@@ -4,6 +4,7 @@ import { useGeolocated } from "react-geolocated";
 import { observer } from "mobx-react-lite";
 import { store } from "../../../Store/store";
 import "./startPage.scss";
+import StartPageCities from "../../StartPageCities/startPageCities";
 const StartPage: FC = () => {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
@@ -38,23 +39,7 @@ const StartPage: FC = () => {
       <Navbar />
       <div className="StartPage">
         <div className="StartPageTitle">{store.userCity.city}</div>
-        {loading ? (
-          <div>{loading}</div>
-        ) : (
-          <div className="StartPageCities">
-            <p>
-              Today is weather:
-              {store.userCity.weather}
-            </p>
-            <img
-              src={`http://openweathermap.org/img/wn/${store.userCity.icon}@2x.png`}
-              alt=""
-            />
-            <hr />
-
-            <p>Today is temperature: {store.userCity.temperature}</p>
-          </div>
-        )}
+        {loading ? <div>{loading}</div> : <StartPageCities />}
       </div>
     </>
   ) : (

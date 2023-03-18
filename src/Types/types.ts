@@ -21,14 +21,3 @@ export interface IAuth {
   isLoading: boolean;
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
-export interface IDay {
-  temp: {
-    day: string;
-    night: string;
-  };
-  weather: {
-    description: string;
-    icon: string;
-  };
-  dt: string;
-}

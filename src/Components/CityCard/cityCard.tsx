@@ -1,9 +1,7 @@
 import { observer } from "mobx-react-lite";
 import { FC } from "react";
-import { useNavigate } from "react-router-dom";
 import { store } from "../../Store/store";
 import { ICities } from "../../Types/types";
-import MyButton from "../UI/MyButton/myButton";
 import "./cityCard.scss";
 
 const CityCard: FC<ICities> = ({
@@ -15,8 +13,6 @@ const CityCard: FC<ICities> = ({
   lat,
   lon,
 }) => {
-  const navigate = useNavigate();
-
   return (
     <div className="cityCard">
       <div key={id}>

@@ -1,8 +1,7 @@
-import AppRouter from "./Components/AppRouter/appRouter";
-import { BrowserRouter, HashRouter } from "react-router-dom";
-import { AuthContext } from "./Context/context";
 import { useEffect, useState } from "react";
-import Navbar from "./Components/UI/Navbar/navbar";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./Components/AppRouter/appRouter";
+import { AuthContext } from "./Context/context";
 function App() {
   const [isAuth, setIsAuth] = useState(false);
   const [isLoading, setIsLoading] = useState(true);

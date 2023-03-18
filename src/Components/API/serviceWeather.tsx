@@ -15,6 +15,3 @@ export const getWeekWeather = (lat: number, lon: number) => {
     {}
   );
 };
-// export const getCityFourDays = (city: string) => {
-//   return instance.get(`forecast/hourly?q=${city}&appid=${Apikey}`, {});
-// };
