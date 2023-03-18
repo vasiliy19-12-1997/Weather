@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+Weather (React + Typescript + MobX) ☀
+=====================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Weather**  prototype written in Typescript + React + SASS  built with [MobX].
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Sign in**
+&nbsp;<br />
+&nbsp;<br />
+<img src="https://user-images.githubusercontent.com/102950888/226092707-6339dcfd-3284-4f68-a35a-6d20edc209b0.png" alt="Nested Task List gif demo" width=600 />
+&nbsp;<br />
+&nbsp;<br />
+**Start page**
+&nbsp;<br />
+&nbsp;<br />
+<img src="https://user-images.githubusercontent.com/102950888/226092743-c144ae71-9b34-443c-b5de-7eb8b286ef2c.png" alt="Nested Task List gif demo" width=600 />
+&nbsp;<br />
+&nbsp;<br />
+**Search city**
+&nbsp;<br />
+&nbsp;<br />
+<img src="https://user-images.githubusercontent.com/102950888/226092855-2d251978-4da0-4770-8e72-9d88e0f0cd26.png" alt="Nested Task List gif demo" width=600 />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+Project created by [Konovalov Vasiliy](https://github.com/vasiliy19-12-1997)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Install / Run in dev mode
 
-### `npm test`
+From the root of the project directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install
+npm start
+open http://localhost:3000
+```
 
-### `npm run build`
+Or if you're a `yarn` person:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+yarn
+yarn start
+open http://localhost:3000
+```
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For a project of this scale one of the primary considerations was keeping the design simple and understandable. Hence we have:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Entry Point** - `src/index.jsx` and `src/App.jsx`.
+- **Stores** - `src/stores/store.ts` for au  provide the state management and define the essential actions to manipulate the tree that represents the visual nested task list and context for authorization `src/Context`.
+- **App router** - `src/Components/App router` Routing is divided into private and public in `src/Components/Router`.
+- **StartPage** - `src/Components/pages/StartPage` the main component.
+- **UI** - `src/Components/UI` This folder contains components for the UI interface.
+- **Components** - `src/Сomponents` are the React building block components for the app.
+ 
+# Contact
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+I enjoy hearing from people checking out my projects. Get in touch on telegram https://t.me/kebab_case  or email me at
+konovalov.vasiliy97@yandex.ru. 
