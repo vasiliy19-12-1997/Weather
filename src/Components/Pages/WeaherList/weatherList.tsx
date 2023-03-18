@@ -28,7 +28,7 @@ const WeatherList = () => {
   });
   return (
     <div className="weatherList">
-      <form action="">
+      <form>
         <MyInput
           type="text"
           placeholder="Search for city..."
@@ -47,6 +47,7 @@ const WeatherList = () => {
           Find
         </MyButton>
       </form>
+      <div></div>
       <div>{cities}</div>
     </div>
   );

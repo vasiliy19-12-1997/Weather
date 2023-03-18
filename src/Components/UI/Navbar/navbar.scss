@@ -1,10 +1,24 @@
 .burger-menu-container {
-  display: flex;
-  // justify-content: space-around;
+  padding: 10px;
   align-items: center;
   background-color: #e6e4d0;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
+  .menu-items {
+    display: flex;
+    justify-content: space-around;
+    & button {
+      background-color: #c5b9b9;
+      color: #fff;
+      padding: 0.5rem 0.8rem;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+    }
+    :hover {
+      background: rgb(128, 135, 139);
+    }
+  }
 }
 @media (max-width: 450px) {
   .burger-menu-container {
@@ -68,9 +82,9 @@
         transform: translateX(0);
       }
 
-      a {
+      button {
         margin: 20px;
-        font-size: 24px;
+        font-size: 16px;
         font-weight: bold;
         color: #fff;
         text-decoration: none;

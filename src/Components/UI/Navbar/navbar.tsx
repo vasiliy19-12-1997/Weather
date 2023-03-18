@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Context/context";
 import { IAuth } from "../../../Types/types";
 import "./navbar.scss";
+import MyButton from "./../MyButton/myButton";
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = () => {
@@ -31,9 +32,9 @@ const Navbar: FC<NavbarProps> = () => {
           <div className="line3"></div>
         </div>
         <div className={`menu-items ${menuOpen ? "open" : ""}`}>
-          <a href="#">Search Weather</a>
-          <a href="#">Profile</a>
-          <a href="#">Log Out</a>
+          <button onClick={() => navigate("/weatherList")}>Search city</button>
+          <button onClick={() => navigate("/profile")}>Profile</button>
+          <button onClick={logOut}>Log out</button>
         </div>
       </div>
     </>
