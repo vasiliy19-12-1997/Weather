@@ -36,9 +36,7 @@ const StartPage: FC = () => {
     <div>Geolocation is not enabled</div>
   ) : coords ? (
     <>
-      <Navbar />
       <div className="StartPage">
-        <div className="StartPageTitle">{store.userCity.city}</div>
         {loading ? <div>{loading}</div> : <StartPageCities />}
       </div>
     </>

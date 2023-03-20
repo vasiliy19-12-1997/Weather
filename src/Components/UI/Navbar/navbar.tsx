@@ -31,7 +31,13 @@ const Navbar: FC = () => {
         </div>
         <div className={`menu-items ${menuOpen ? "open" : ""}`}>
           <button onClick={() => navigate("/weatherList")}>Search city</button>
-          <button onClick={() => navigate("/profile")}>Profile</button>
+          <button
+            onClick={() =>
+              navigate("/https://vasiliy19-12-1997.github.io/profile/")
+            }
+          >
+            Profile
+          </button>
           <button onClick={logOut}>Log out</button>
         </div>
       </div>
