@@ -1,10 +1,8 @@
-import { FC, useEffect, useState } from "react";
-import Navbar from "../../UI/Navbar/navbar";
-import { useGeolocated } from "react-geolocated";
 import { observer } from "mobx-react-lite";
+import { FC, useEffect, useState } from "react";
+import { useGeolocated } from "react-geolocated";
 import { store } from "../../../Store/store";
-import "./startPage.scss";
-import StartPageCities from "../../StartPageCities/startPageCities";
+import ThisDay from "../../ThisDay/thisDay";
 const StartPage: FC = () => {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
@@ -37,7 +35,7 @@ const StartPage: FC = () => {
   ) : coords ? (
     <>
       <div className="StartPage">
-        {loading ? <div>{loading}</div> : <StartPageCities />}
+        {loading ? <div>{loading}</div> : <ThisDay />}
       </div>
     </>
   ) : (

@@ -1,0 +1,23 @@
+.weather-container {
+  display: flex;
+  justify-content: space-between;
+  .location-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .weather-info {
+      .temperature {
+        font-size: 96px;
+        font-weight: bold;
+        color: #4793ff;
+      }
+      .weather-description {
+        font-size: 40px;
+        font-weight: 600;
+      }
+    }
+    .date-city-name {
+      font-size: 25px;
+    }
+  }
+}

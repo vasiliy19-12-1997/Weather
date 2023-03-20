@@ -19,8 +19,8 @@ function App() {
     >
       <div className="container">
         <BrowserRouter>
-          <Header />
           <Navbar />
+          <Header />
           <AppRouter />
         </BrowserRouter>
       </div>
