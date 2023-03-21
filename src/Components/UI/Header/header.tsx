@@ -26,7 +26,7 @@ const Header: FC = (props: Props) => {
       <div className="header">
         <div className="header-wrapper">
           <SharedSvgSelector id="header-logo" />
-          <div className="header-wrapper-title">Weather</div>
+          <div className="header-title">Weather</div>
         </div>
         <div className="header-wrapper">
           <SharedSvgSelector id="change-theme" />
