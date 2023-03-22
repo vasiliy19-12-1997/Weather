@@ -2,7 +2,6 @@ import { SharedSvgSelector } from "../../Assets/Icons/Shared/sharedSvgSelector";
 import "./thisDayInfo.scss";
 import cloud from "../../Assets/Images/cloud.png";
 type Props = {};
-
 const ThisDayInfo = (props: Props) => {
   return (
     <div className="day-info">
