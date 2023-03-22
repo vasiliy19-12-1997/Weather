@@ -1,6 +1,7 @@
 .weather-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   .location-info {
     display: flex;
     justify-content: space-between;
@@ -27,7 +28,7 @@
       }
     }
     img {
-      width: 200px;
+      width: 125px;
     }
   }
 }

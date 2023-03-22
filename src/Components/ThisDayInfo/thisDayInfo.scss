@@ -1,15 +1,32 @@
 .day-info {
-  display: flex;
+  display: grid;
+  grid-template: 350px/20px 1fr 1fr 260px;
   gap: 30px;
-  align-items: flex-start;
-  width: 750px;
-  height: 300px;
-  justify-content: space-around;
+  box-shadow: 1px 1px 32px 2px rgba(34, 60, 80, 0.2);
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  padding: 40px;
+
   .icons {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
   }
   .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      position: absolute;
+      margin-left: 300px;
+      opacity: 0.3;
+    }
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
