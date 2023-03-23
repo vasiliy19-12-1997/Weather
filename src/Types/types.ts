@@ -21,3 +21,8 @@ export interface IAuth {
   isLoading: boolean;
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
+export interface ItemDay {
+  icon_id: string;
+  name: string;
+  value: string;
+}

@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { store } from "../../Store/store";
-import ThisDayInfo from "../ThisDayInfo/thisDayInfo";
 import "./thisDay.scss";
+import ThisDayInfo from "./ThisDayInfo/thisDayInfo";
 const ThisDay: FC = () => {
   const date = new Date();
 
