@@ -9,19 +9,20 @@ Weather (React + Typescript + MobX) ☀
 **Sign in**
 &nbsp;<br />
 &nbsp;<br />
-<img src="https://user-images.githubusercontent.com/102950888/226092707-6339dcfd-3284-4f68-a35a-6d20edc209b0.png" alt="Nested Task List gif demo" width=600 />
+<img src="https://user-images.githubusercontent.com/102950888/227084180-77c8e41c-0cee-46a0-9291-a3f9e51d9714.png" alt="Start Page" width=600 />
 &nbsp;<br />
 &nbsp;<br />
 **Start page**
 &nbsp;<br />
 &nbsp;<br />
-<img src="https://user-images.githubusercontent.com/102950888/226092743-c144ae71-9b34-443c-b5de-7eb8b286ef2c.png" alt="Nested Task List gif demo" width=600 />
+<img src="https://user-images.githubusercontent.com/102950888/227084498-d1d1f0d2-05c3-4e37-9119-775eaf0a65e5.png
+" alt="Login" width=600 />
 &nbsp;<br />
 &nbsp;<br />
 **Search city**
 &nbsp;<br />
 &nbsp;<br />
-<img src="https://user-images.githubusercontent.com/102950888/226092855-2d251978-4da0-4770-8e72-9d88e0f0cd26.png" alt="Nested Task List gif demo" width=600 />
+<img src="https://user-images.githubusercontent.com/102950888/227084602-11d1cce3-90ff-48af-bdc7-75c02ddf4fcf.png" alt="Search City" width=600 />
 &nbsp;<br />
 &nbsp;<br />
 &nbsp;<br />
