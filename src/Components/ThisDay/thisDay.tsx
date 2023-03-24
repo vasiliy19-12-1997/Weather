@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { store } from "../../Store/store";
 import "./thisDay.scss";
 import ThisDayInfo from "./ThisDayInfo/thisDayInfo";

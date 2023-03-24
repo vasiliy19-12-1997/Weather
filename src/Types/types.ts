@@ -9,7 +9,7 @@ export interface ICities extends IUserCities {
   lon: number; //долгота
   id?: number;
 }
-export interface ICardWeather extends IUserCities {
+export interface ICardWeather extends IUserCities, ItemDay {
   dayTemp?: number;
   nightTemp?: number;
   weather?: string;

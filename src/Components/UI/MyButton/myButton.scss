@@ -1,6 +1,7 @@
 .MyButton {
   display: grid;
   grid-template-columns: auto;
+  border-radius: 5px;
   &B {
     background-color: #4793ff;
     color: #fff;

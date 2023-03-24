@@ -10,9 +10,7 @@ const ThisDayItem = ({ item }: Props) => {
   return (
     <div className="item">
       <SharedSvgSelector id={icon_id} />
-
       <p>{name}</p>
-
       <p>{value}</p>
     </div>
   );
