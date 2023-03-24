@@ -44,8 +44,8 @@ class Store {
 
   //
   //   получаем погоду за 7 дней опять же из координат
-  getWeekWeather = async (lat: number, lon: number, cnt: number) => {
-    const { data } = await getWeekWeather(lat, lon, cnt);
+  getWeekWeather = async (lat: number, lon: number) => {
+    const { data } = await getWeekWeather(lat, lon);
     //time formatting from UTC UNIX in seconds
     const format = (time: number): string => {
       const day = new Date(time * 1e3);

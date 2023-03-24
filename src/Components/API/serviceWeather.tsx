@@ -9,8 +9,8 @@ export const getCurrentUserWeather = (lat: number, lon: number) => {
 export const getCurrentCityWeather = (city: string) => {
   return instance.get(`weather?q=${city}&appid=${Apikey}`, {});
 };
-export const getWeekWeather = (lat: number, lon: number, cnt: number) => {
+export const getWeekWeather = (lat: number, lon: number) => {
   return instance.get(
-    `forecast/daily?lat=${lat}&lon=${lon}&cnt=${cnt}&appid=${Apikey}`
+    `onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,current&units=metric&appid=${Apikey}`
   );
 };
