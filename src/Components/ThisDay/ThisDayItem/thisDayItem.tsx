@@ -1,17 +1,24 @@
 import { SharedSvgSelector } from "../../../Assets/Icons/Shared/sharedSvgSelector";
-import { ItemDay } from "../../../Types/types";
+import { ICardWeather, ItemDay } from "../../../Types/types";
 import "../ThisDayInfo/thisDayInfo.scss";
 interface Props {
-  item: ItemDay;
+  item: ICardWeather;
 }
 
 const ThisDayItem = ({ item }: Props) => {
-  const { icon_id, name, value } = item;
   return (
     <div className="item">
-      <SharedSvgSelector id={icon_id} />
-      <p>{name}</p>
-      <p>{value}</p>
+      <SharedSvgSelector id={item.icon_id} />
+      <p>{item.name}</p>
+      <p>{item.value}</p>
+      <p>{item.city}</p>
+      <p>{item.day}</p>
+      <p>{item.dayTemp}</p>
+      <p>{item.icon}</p>
+      <p>{item.name}</p>
+      <p>{item.nightTemp}</p>
+      <p>{item.weather}</p>
+      <p>{item.value}</p>
     </div>
   );
 };
