@@ -10,7 +10,7 @@
   .item {
     position: relative;
     display: grid;
-    grid-template: 1fr/1fr 1fr 1fr;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
     .icons {
       gap: 5px;
     }

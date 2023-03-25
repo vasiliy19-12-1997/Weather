@@ -1,24 +1,21 @@
 import { SharedSvgSelector } from "../../../Assets/Icons/Shared/sharedSvgSelector";
-import { ICardWeather } from "../../../Types/types";
+import { store } from "../../../Store/store";
+import { ICardWeather, IUserCities } from "../../../Types/types";
 import "../ThisDayInfo/thisDayInfo.scss";
+import { ItemDay } from "./../../../Types/types";
 interface Props {
-  item: ICardWeather;
+  item: ItemDay;
 }
-
 const ThisDayItem = ({ item }: Props) => {
   return (
     <div className="item">
-      <SharedSvgSelector id={item.icon_id} />
-      <p>{item.name}</p>
-      <p>{item.value}</p>
-      <p>{item.city}</p>
-      <p>{item.day}</p>
-      <p>{item.dayTemp}</p>
-      <p>{item.icon}</p>
-      <p>{item.name}</p>
-      <p>{item.nightTemp}</p>
-      <p>{item.weather}</p>
-      <p>{item.value}</p>
+      <div className="icons">
+        <SharedSvgSelector id={item.icon_id} />
+      </div>
+      <p className="city">
+        {item.name}
+        {item.value}
+      </p>
     </div>
   );
 };

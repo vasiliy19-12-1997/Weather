@@ -1,32 +1,34 @@
+import { store } from "../Store/store";
+
 export const items = [
   {
     icon_id: "temperature",
     name: "temperature",
-    value: "Feels like -3°C%",
+    value: `${store.userCity.temperature} feels like:${store.userCity.feels_like}`,
   },
   {
     icon_id: "Humidity",
     name: "Humidity",
-    value: "86%",
+    value: `${store.userCity.humidity}`,
   },
   {
     icon_id: "Dew point",
-    name: "Dew point",
-    value: "-1°C",
+    name: "temp_min",
+    value: `${store.userCity.temp_min}`,
   },
   {
     icon_id: "wind",
     name: "wind",
-    value: "3.0m/s",
+    value: `${store.userCity.wind}`,
   },
   {
     icon_id: "pressure",
     name: "pressure",
-    value: "1012hPa",
+    value: `${store.userCity.pressure}`,
   },
   {
     icon_id: "Visibility",
     name: "Visibility",
-    value: "10.0km",
+    value: `${store.userCity.visibility}`,
   },
 ];
