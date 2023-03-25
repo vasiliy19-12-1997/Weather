@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./Components/AppRouter/appRouter";
+import Header from "./Components/UI/Header/header";
+import Navbar from "./Components/UI/Navbar/navbar";
 import { AuthContext } from "./Context/context";
 function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -15,9 +17,13 @@ function App() {
     <AuthContext.Provider
       value={{ isAuth, setIsAuth, isLoading, setIsLoading }}
     >
-      <BrowserRouter>
-        <AppRouter />
-      </BrowserRouter>
+      <div className="container">
+        <BrowserRouter>
+          <Navbar />
+          <Header />
+          <AppRouter />
+        </BrowserRouter>
+      </div>
     </AuthContext.Provider>
   );
 }

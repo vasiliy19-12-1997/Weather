@@ -5,7 +5,7 @@ import { IAuth } from "../../../Types/types";
 import "./navbar.scss";
 
 const Navbar: FC = () => {
-  const { isAuth, setIsAuth } = useContext(AuthContext) as IAuth;
+  const { setIsAuth } = useContext(AuthContext) as IAuth;
   const navigate = useNavigate();
   const logOut = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -31,7 +31,7 @@ const Navbar: FC = () => {
         </div>
         <div className={`menu-items ${menuOpen ? "open" : ""}`}>
           <button onClick={() => navigate("/weatherList")}>Search city</button>
-          <button onClick={() => navigate("/profile")}>Profile</button>
+          <a href="https://vasiliy19-12-1997.github.io/profile/">Profile</a>
           <button onClick={logOut}>Log out</button>
         </div>
       </div>

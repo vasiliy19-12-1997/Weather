@@ -11,7 +11,6 @@ export const getCurrentCityWeather = (city: string) => {
 };
 export const getWeekWeather = (lat: number, lon: number) => {
   return instance.get(
-    `onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,current&units=metric&appid=${Apikey}`,
-    {}
+    `onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,current&units=metric&appid=${Apikey}`
   );
 };

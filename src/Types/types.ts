@@ -5,11 +5,11 @@ export interface IUserCities {
   icon?: string;
 }
 export interface ICities extends IUserCities {
-  lat: number; //ширина
+  lat: number; //широта
   lon: number; //долгота
   id?: number;
 }
-export interface ICardWeather extends IUserCities {
+export interface ICardWeather extends IUserCities, ItemDay {
   dayTemp?: number;
   nightTemp?: number;
   weather?: string;
@@ -20,4 +20,9 @@ export interface IAuth {
   setIsAuth: React.Dispatch<React.SetStateAction<boolean>>;
   isLoading: boolean;
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export interface ItemDay {
+  icon_id: string;
+  name: string;
+  value: string;
 }
