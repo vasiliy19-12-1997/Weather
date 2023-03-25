@@ -1,15 +1,14 @@
+import { useEffect } from "react";
 import cloud from "../../../Assets/Images/cloud.png";
 import { store } from "../../../Store/store";
 import ThisDayItem from "../ThisDayItem/thisDayItem";
-import { items } from "./../../../Types/enums";
-import { ICardWeather, ItemDay } from "./../../../Types/types";
+import { ICardWeather, ICities } from "./../../../Types/types";
 import "./thisDayInfo.scss";
-import { useEffect } from "react";
 
-const ThisDayInfo = () => {
+const ThisDayInfo = ({ lat, lon }: ICities) => {
   useEffect(() => {
-    store.getWeekWeather(44.34, 10.99);
-  }, []);
+    store.getWeekWeather(lat, lon);
+  }, [lat, lon]);
   return (
     <div className="day-info">
       {store.currentCity.map((item: ICardWeather) => (

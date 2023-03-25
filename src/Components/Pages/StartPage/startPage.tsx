@@ -35,7 +35,7 @@ const StartPage: FC = () => {
   ) : coords ? (
     <>
       <div className="StartPage">
-        {loading ? <div>{loading}</div> : <ThisDay />}
+        {loading ? <div>{loading}</div> : <ThisDay lat={lat} lon={lon} />}
       </div>
     </>
   ) : (

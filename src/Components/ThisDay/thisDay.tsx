@@ -1,8 +1,9 @@
-import { FC } from "react";
 import { store } from "../../Store/store";
+import { ICities } from "../../Types/types";
 import "./thisDay.scss";
 import ThisDayInfo from "./ThisDayInfo/thisDayInfo";
-const ThisDay: FC = () => {
+
+const ThisDay = ({ lat, lon }: ICities) => {
   const date = new Date();
 
   return (
@@ -20,7 +21,7 @@ const ThisDay: FC = () => {
           className="weather-icon"
         />
       </div>
-      <ThisDayInfo />
+      <ThisDayInfo lat={lat} lon={lon} />
     </div>
   );
 };

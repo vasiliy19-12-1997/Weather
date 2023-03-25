@@ -1,5 +1,5 @@
 import { SharedSvgSelector } from "../../../Assets/Icons/Shared/sharedSvgSelector";
-import { ICardWeather, ItemDay } from "../../../Types/types";
+import { ICardWeather } from "../../../Types/types";
 import "../ThisDayInfo/thisDayInfo.scss";
 interface Props {
   item: ICardWeather;

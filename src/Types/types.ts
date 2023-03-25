@@ -5,7 +5,7 @@ export interface IUserCities {
   icon?: string;
 }
 export interface ICities extends IUserCities {
-  lat: number; //ширина
+  lat: number; //широта
   lon: number; //долгота
   id?: number;
 }
