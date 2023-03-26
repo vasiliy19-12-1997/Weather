@@ -9,14 +9,13 @@ Weather (React + Typescript + MobX) ☀
 **Sign in**
 &nbsp;<br />
 &nbsp;<br />
-<img src="https://user-images.githubusercontent.com/102950888/227084180-77c8e41c-0cee-46a0-9291-a3f9e51d9714.png" alt="Start Page" width=600 />
+<img src="https://user-images.githubusercontent.com/102950888/227767545-37704992-e8fe-491c-9d72-e0b999ee1dd5.png" alt="Start Page" width=600 />
 &nbsp;<br />
 &nbsp;<br />
 **Start page**
 &nbsp;<br />
 &nbsp;<br />
-<img src="https://user-images.githubusercontent.com/102950888/227084498-d1d1f0d2-05c3-4e37-9119-775eaf0a65e5.png
-" alt="Login" width=600 />
+<img src="https://user-images.githubusercontent.com/102950888/227767555-4196940a-b09f-439c-8076-756582d1a395.png" alt="Start Page" width=600 />
 &nbsp;<br />
 &nbsp;<br />
 **Search city**
