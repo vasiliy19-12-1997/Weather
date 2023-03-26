@@ -10,7 +10,7 @@ class Store {
   userCity: IUserCities = {};
   cities: ICities[] = [];
   currentCity: ICardWeather[] = [];
-
+  date: Date = new Date();
   constructor() {
     makeAutoObservable(this);
   }

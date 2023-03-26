@@ -1,18 +1,16 @@
 import { store } from "../../Store/store";
 import { ICities } from "../../Types/types";
-import "./thisDay.scss";
+import Days from "../Days/days";
 import ThisDayInfo from "./ThisDayInfo/thisDayInfo";
 
 const ThisDay = ({ lat, lon }: ICities) => {
-  const date = new Date();
-
   return (
     <div className="weather-container">
       <div className="location-info">
         <ul className="info">
           <p className="temperature">{store.userCity.temperature}°</p>
           <p className="weather-description"> {store.userCity.weather}</p>
-          <p className="date"> Today is: {date.toLocaleDateString()}</p>
+          <p className="date"> Today is: {store.date.toLocaleDateString()}</p>
           <p className="city">City: {store.userCity.city}</p>
         </ul>
         <img

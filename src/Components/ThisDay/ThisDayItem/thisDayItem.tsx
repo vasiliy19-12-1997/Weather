@@ -1,6 +1,5 @@
+import { observer } from "mobx-react-lite";
 import { SharedSvgSelector } from "../../../Assets/Icons/Shared/sharedSvgSelector";
-import { store } from "../../../Store/store";
-import { ICardWeather, IUserCities } from "../../../Types/types";
 import "../ThisDayInfo/thisDayInfo.scss";
 import { ItemDay } from "./../../../Types/types";
 interface Props {
@@ -12,10 +11,10 @@ const ThisDayItem = ({ item }: Props) => {
       <div className="icons">
         <SharedSvgSelector id={item.icon_id} />
       </div>
-      <p className="city">
+      <h3 className="city">
         {item.name}
         {item.value}
-      </p>
+      </h3>
     </div>
   );
 };

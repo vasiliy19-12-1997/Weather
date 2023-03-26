@@ -32,3 +32,12 @@ export const items = [
     value: `${store.userCity.visibility}`,
   },
 ];
+export const days = [
+  {
+    day: `${store.date}`,
+    icon: `${store.userCity.icon}`,
+    dayTemp: `${store.userCity.temp_max}`,
+    nightTemp: `${store.userCity.temp_min}`,
+    weather: `${store.userCity.weather}`,
+  },
+];

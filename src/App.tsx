@@ -17,13 +17,11 @@ function App() {
     <AuthContext.Provider
       value={{ isAuth, setIsAuth, isLoading, setIsLoading }}
     >
-      <div className="container">
-        <BrowserRouter>
-          <Navbar />
-          <Header />
-          <AppRouter />
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <Header />
+        <AppRouter />
+      </BrowserRouter>
     </AuthContext.Provider>
   );
 }
