@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import cloud from "../../../Assets/Images/cloud.png";
 import { store } from "../../../Store/store";
 import ThisDayItem from "../ThisDayItem/thisDayItem";
@@ -9,10 +9,10 @@ import "./thisDayInfo.scss";
 const ThisDayInfo = ({ lat, lon }: ICities) => {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     store.getCurrentUserWeather(lat, lon);
     setLoading(false);
-  }, [lat, lon]);
+  }, []);
   return (
     <div className="day-info">
       <ThisDayItem />
