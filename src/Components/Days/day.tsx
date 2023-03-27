@@ -12,9 +12,9 @@ const Day = ({ card }: Props) => {
         className="weather-icon"
       />
       <div>
-        <b>Day temp: {card.dayTemp}</b>
-        <p>Night temp: {card.nightTemp}</p>
-        <p>Weather: {card.weather}</p>
+        <p className="day-temp">{card.dayTemp}</p>
+        <p>{card.nightTemp}</p>
+        <p>{card.weather}</p>
       </div>
     </div>
   );

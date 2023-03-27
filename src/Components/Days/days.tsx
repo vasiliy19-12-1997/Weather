@@ -8,7 +8,7 @@ const Days = ({ lat, lon }: ICities) => {
     store.getWeekWeather(lat, lon);
   });
   return (
-    <>
+    <div className="days-div">
       <div className="header-days">
         <MyButton>on 8 days</MyButton>
         <MyButton>on mounth</MyButton>
@@ -19,7 +19,7 @@ const Days = ({ lat, lon }: ICities) => {
           <Day card={card} key={card.id} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
