@@ -1,6 +1,5 @@
 import { store } from "../../Store/store";
 import { ICities } from "../../Types/types";
-import Days from "../Days/days";
 import ThisDayInfo from "./ThisDayInfo/thisDayInfo";
 
 const ThisDay = ({ lat, lon }: ICities) => {

@@ -6,14 +6,10 @@
   border-radius: 20px;
   border: none;
   padding: 40px;
-  width: 750px;
-  .item {
-    position: relative;
+  .card {
     display: grid;
-    grid-template: 1fr 1fr/1fr 1fr 1fr;
-    .icons {
-      gap: 5px;
-    }
+    grid-template: 1fr/70px 1fr;
+    align-items: center;
   }
 
   img {
