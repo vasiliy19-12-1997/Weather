@@ -7,30 +7,33 @@ const ThisDayItem = () => {
     <>
       <div className="card">
         <SharedSvgSelector id={"temperature"} />
-        <h3 className="city">
-          Temperature:
-          {store.userCity.temperature}°C
-        </h3>
+        <p className="city">Temperature:</p>
+        <p>{store.userCity.temperature}°C</p>
       </div>
       <div className="card">
         <SharedSvgSelector id={"dew-point"} />
-        <h3 className="city">Feels like: {store.userCity.feels_like}°C</h3>
+        <p className="city">Feels like:</p>
+        <p>{store.userCity.feels_like}°C</p>
       </div>
       <div className="card">
         <SharedSvgSelector id={"humidity"} />
-        <h3 className="city">Humidity: {store.userCity.humidity}%</h3>
+        <p className="city">Humidity:</p>
+        <p>{store.userCity.humidity} %</p>
       </div>
       <div className="card">
         <SharedSvgSelector id={"wind"} />
-        <h3 className="city">Wind: {store.userCity.wind} m/s</h3>
+        <p className="city">Wind</p>
+        <p>{store.userCity.wind} m/s</p>
       </div>
       <div className="card">
         <SharedSvgSelector id={"pressure"} />
-        <h3 className="city">Pressure: {store.userCity.pressure}mm.rt.st</h3>
+        <p className="city">Pressure:</p>
+        <p>{store.userCity.pressure} mm.rt.st normal</p>
       </div>
       <div className="card">
         <SharedSvgSelector id={"visibility"} />
-        <h3 className="city">Visibility: {store.userCity.visibility} m</h3>
+        <p className="city">Visibility:</p>
+        <p>{store.userCity.visibility} m</p>
       </div>
     </>
   );
