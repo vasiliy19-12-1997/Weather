@@ -14,7 +14,7 @@ const ThisDay = ({ lat, lon }: ICities) => {
             className="weather-icon"
           />
         </div>
-        <div>
+        <div className="text">
           <p className="date">{store.date.toLocaleDateString()}</p>
           <p className="weather-description"> {store.userCity.weather}</p>
           <p className="city">City: {store.userCity.city}</p>

@@ -13,8 +13,8 @@ const Day = ({ card }: Props) => {
       />
       <div>
         <p className="day-temp">{card.dayTemp}</p>
-        <p>{card.nightTemp}</p>
-        <p>{card.weather}</p>
+        <p className="night-temp">{card.nightTemp}</p>
+        <p className="day-descript">{card.weather}</p>
       </div>
     </div>
   );

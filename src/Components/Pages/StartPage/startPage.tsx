@@ -2,10 +2,9 @@ import { observer } from "mobx-react-lite";
 import { FC, useEffect, useLayoutEffect, useState } from "react";
 import { useGeolocated } from "react-geolocated";
 import { store } from "../../../Store/store";
-import "./startPage.scss";
-import ThisDay from "../../ThisDay/thisDay";
 import Days from "../../Days/days";
-import ThisDayInfo from "../../ThisDay/ThisDayInfo/thisDayInfo";
+import ThisDay from "../../ThisDay/thisDay";
+import "./startPage.scss";
 const StartPage: FC = () => {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);

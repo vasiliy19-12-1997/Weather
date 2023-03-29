@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { store } from "../../Store/store";
 import { ICities } from "../../Types/types";
-import Day from "./day";
 import MyButton from "./../UI/MyButton/myButton";
+import Day from "./day";
 const Days = ({ lat, lon }: ICities) => {
   useEffect(() => {
     store.getWeekWeather(lat, lon);

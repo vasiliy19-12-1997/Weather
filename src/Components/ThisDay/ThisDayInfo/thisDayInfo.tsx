@@ -1,9 +1,8 @@
-import { observer } from "mobx-react-lite";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import cloud from "../../../Assets/Images/cloud.png";
 import { store } from "../../../Store/store";
 import ThisDayItem from "../ThisDayItem/thisDayItem";
-import { ICardWeather, ICities, ItemDay } from "./../../../Types/types";
+import { ICities } from "./../../../Types/types";
 import "./thisDayInfo.scss";
 
 const ThisDayInfo = ({ lat, lon }: ICities) => {
