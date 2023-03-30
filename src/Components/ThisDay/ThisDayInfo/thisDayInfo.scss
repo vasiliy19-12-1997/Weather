@@ -1,4 +1,6 @@
+@import "../../../Styles/properties.scss";
 .day-info {
+  background: var(#{--components-background-default});
   display: flex;
   justify-content: center;
   position: relative;
@@ -14,7 +16,8 @@
     font-size: 16px;
 
     .city {
-      color: #939cb0;
+      color: $base-color;
+      color: var(#{--text-color-default});
       font-weight: 200;
     }
     .store {
