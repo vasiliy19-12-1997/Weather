@@ -3,8 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./Components/AppRouter/appRouter";
 import Header from "./Components/UI/Header/header";
 import Navbar from "./Components/UI/Navbar/navbar";
-import { AuthContext, ThemeContext } from "./Context/context";
-import { ThemeProvider } from "./Context/themeProvider";
+import { AuthContext } from "./Context/context";
 function App() {
   const [isAuth, setIsAuth] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -18,11 +17,13 @@ function App() {
     <AuthContext.Provider
       value={{ isAuth, setIsAuth, isLoading, setIsLoading }}
     >
-      <BrowserRouter>
-        <Navbar />
-        <Header />
-        <AppRouter />
-      </BrowserRouter>
+      <div className="container">
+        <BrowserRouter>
+          <Navbar />
+          <Header />
+          <AppRouter />
+        </BrowserRouter>
+      </div>
     </AuthContext.Provider>
   );
 }
