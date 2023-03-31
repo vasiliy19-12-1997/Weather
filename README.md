@@ -9,19 +9,22 @@ Weather (React + Typescript + MobX) ☀
 **Sign in**
 &nbsp;<br />
 &nbsp;<br />
-<img src="https://user-images.githubusercontent.com/102950888/227767545-37704992-e8fe-491c-9d72-e0b999ee1dd5.png" alt="Start Page" width=600 />
+<img src="https://user-images.githubusercontent.com/102950888/229137342-28a592da-96ab-483b-9afd-66902553e0f6.png" alt="Start Page" width=600 />
 &nbsp;<br />
 &nbsp;<br />
 **Start page**
 &nbsp;<br />
 &nbsp;<br />
-<img src="https://user-images.githubusercontent.com/102950888/227767555-4196940a-b09f-439c-8076-756582d1a395.png" alt="Start Page" width=600 />
+<img src="https://user-images.githubusercontent.com/102950888/229137523-ab35f89a-63b5-47c1-ad22-c3cbc9ef4c38.png" alt="Start Page" width=600 />
+&nbsp;<br />
+&nbsp;<br />
+<img src="https://user-images.githubusercontent.com/102950888/229137847-784b5f77-9364-46f4-a2ac-dd618bab9dd7.png" alt="Start Page" width=600 />
 &nbsp;<br />
 &nbsp;<br />
 **Search city**
 &nbsp;<br />
 &nbsp;<br />
-<img src="https://user-images.githubusercontent.com/102950888/227084602-11d1cce3-90ff-48af-bdc7-75c02ddf4fcf.png" alt="Search City" width=600 />
+<img src="https://user-images.githubusercontent.com/102950888/229138065-e8af66d3-9846-478f-80f7-661e50452b04.png" alt="Search City" width=600 />
 &nbsp;<br />
 &nbsp;<br />
 &nbsp;<br />
