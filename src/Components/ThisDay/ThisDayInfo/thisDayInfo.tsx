@@ -1,19 +1,21 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import cloud from "../../../Assets/Images/cloud.png";
 import { store } from "../../../Store/store";
 import ThisDayItem from "../ThisDayItem/thisDayItem";
-import { ICardWeather, ICities } from "./../../../Types/types";
+import { ICities } from "./../../../Types/types";
 import "./thisDayInfo.scss";
 
 const ThisDayInfo = ({ lat, lon }: ICities) => {
-  useEffect(() => {
-    store.getWeekWeather(lat, lon);
-  }, [lat, lon]);
+  const [loading, setLoading] = useState(true);
+
+  useLayoutEffect(() => {
+    store.getCurrentUserWeather(lat, lon);
+    setLoading(false);
+  }, []);
   return (
     <div className="day-info">
-      {store.currentCity.map((item: ICardWeather) => (
-        <ThisDayItem item={item} key={item.value} />
-      ))}
+      <ThisDayItem />
+
       <img src={cloud} alt="cloud" />
     </div>
   );

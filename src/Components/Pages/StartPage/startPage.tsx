@@ -1,8 +1,10 @@
 import { observer } from "mobx-react-lite";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useLayoutEffect, useState } from "react";
 import { useGeolocated } from "react-geolocated";
 import { store } from "../../../Store/store";
+import Days from "../../Days/days";
 import ThisDay from "../../ThisDay/thisDay";
+import "./startPage.scss";
 const StartPage: FC = () => {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
@@ -23,10 +25,10 @@ const StartPage: FC = () => {
     });
   }, []);
   //функция из стора, чтобы отобразить на странице
-  useEffect(() => {
+  useLayoutEffect(() => {
     store.getCurrentUserWeather(lat, lon);
     setLoading(false);
-  }, [store.userCity.city, lat, lon]);
+  }, [store.userCity.city]);
 
   return !isGeolocationAvailable ? (
     <div>Your browser does not support Geolocation</div>
@@ -34,8 +36,9 @@ const StartPage: FC = () => {
     <div>Geolocation is not enabled</div>
   ) : coords ? (
     <>
-      <div className="StartPage">
+      <div className="startPage">
         {loading ? <div>{loading}</div> : <ThisDay lat={lat} lon={lon} />}
+        {loading ? <div>{loading}</div> : <Days lat={lat} lon={lon} />}
       </div>
     </>
   ) : (

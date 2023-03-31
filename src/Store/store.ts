@@ -1,32 +1,43 @@
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, runInAction } from "mobx";
 import {
   getCurrentCityWeather,
   getCurrentUserWeather,
 } from "../Components/API/serviceWeather";
+// import { items } from "../Types/enums";
 import { getWeekWeather } from "./../Components/API/serviceWeather";
-import { ICardWeather, ICities, IUserCities } from "./../Types/types";
+import { ICardWeather, ICities, ItemDay, IUserCities } from "./../Types/types";
 
 class Store {
   userCity: IUserCities = {};
   cities: ICities[] = [];
   currentCity: ICardWeather[] = [];
-
+  date: Date = new Date();
   constructor() {
     makeAutoObservable(this);
   }
   //   получаем погоду в городе пользователя из его местоположения(долгота + ширина)
+
   getCurrentUserWeather = async (lat: number, lon: number) => {
     const { data } = await getCurrentUserWeather(lat, lon);
+
     this.userCity = {
       city: data.name,
       temperature: Math.floor(data.main.temp - 273.15),
       weather: data.weather[0].description,
       icon: data.weather[0].icon,
+      feels_like: Math.floor(data.main.feels_like - 273.15),
+      pressure: Math.floor(data.main.pressure / 1.333224),
+      humidity: data.main.humidity,
+      temp_min: Math.floor(data.main.temp_min - 273.15),
+      temp_max: Math.floor(data.main.temp_max - 273.15),
+      visibility: data.visibility,
+      wind: data.wind.speed,
     };
   };
   //   получаем погоду в городе
   getCurrentCityWeather = async (city: string) => {
     const { data } = await getCurrentCityWeather(city);
+
     this.cities = [
       ...this.cities,
       {
@@ -52,8 +63,8 @@ class Store {
       return day.toLocaleDateString();
     };
     this.currentCity = data.daily.map((v: any) => ({
-      dayTemp: v.temp.day,
-      nightTemp: v.temp.night,
+      dayTemp: Math.floor(v.temp.day),
+      nightTemp: Math.floor(v.temp.night),
       weather: v.weather[0].description,
       icon: v.weather[0].icon,
       day: format(v.dt),

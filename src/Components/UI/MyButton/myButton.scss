@@ -1,7 +1,6 @@
 .MyButton {
   display: grid;
   grid-template-columns: auto;
-  border-radius: 5px;
   &B {
     background-color: #4793ff;
     color: #fff;
@@ -9,6 +8,7 @@
     cursor: pointer;
     border: none;
     font-size: 1rem;
+    border-radius: 10px;
   }
   :hover {
     background: rgb(128, 135, 139);
