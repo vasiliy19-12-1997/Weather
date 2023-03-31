@@ -1,7 +1,9 @@
 @import "../../../Styles/properties.scss";
 .container {
   background: var(#{--body-background-default});
-
+  .app-router {
+    margin: 20px;
+  }
   .startPage {
     display: grid;
     grid-template: 350px 1fr/1fr;

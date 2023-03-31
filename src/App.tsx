@@ -20,8 +20,10 @@ function App() {
       <div className="container">
         <BrowserRouter>
           <Navbar />
-          <Header />
-          <AppRouter />
+          <div className="app-router">
+            <Header />
+            <AppRouter />
+          </div>
         </BrowserRouter>
       </div>
     </AuthContext.Provider>

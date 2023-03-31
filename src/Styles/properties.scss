@@ -18,7 +18,15 @@ $card-background-dark: #2e3035;
 
 $card-box-shadow-light: 0px 3px 20px rgba(147, 144, 144, 0.28);
 $card-box-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
-
+%button-template {
+  background-color: #4793ff;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+}
 :root {
   //body-background
   --body-background-dark: #{$body-background-dark};

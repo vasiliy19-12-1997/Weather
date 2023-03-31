@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Select from "react-select";
 import { SharedSvgSelector } from "../../../Assets/Icons/Shared/sharedSvgSelector";
 import { Theme } from "../../../Context/context";
@@ -8,6 +8,7 @@ type Props = {};
 
 const Header: FC = (props: Props) => {
   const theme = useTheme();
+  const [active, setActive] = useState(true);
   const options = [
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
@@ -31,6 +32,7 @@ const Header: FC = (props: Props) => {
   };
   function changeTheme() {
     theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
+    setActive(!active);
   }
   return (
     <header>
@@ -41,13 +43,15 @@ const Header: FC = (props: Props) => {
         </div>
         <div className="header-wrapper">
           <div className="change-theme" onClick={changeTheme}>
-            <SharedSvgSelector id="change-theme" />
+            <SharedSvgSelector
+              id={`${active ? "light-theme" : "night-theme"}`}
+            />
           </div>
-          <Select
+          {/* <Select
             defaultValue={options[0]}
             styles={colourStyles}
             options={options}
-          />
+          /> */}
         </div>
       </div>
     </header>
