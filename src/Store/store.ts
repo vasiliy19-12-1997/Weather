@@ -1,11 +1,12 @@
-import { makeAutoObservable, runInAction } from "mobx";
+import { makeAutoObservable } from "mobx";
 import {
   getCurrentCityWeather,
   getCurrentUserWeather,
+  getTwoDaysWeather,
 } from "../Components/API/serviceWeather";
 // import { items } from "../Types/enums";
 import { getWeekWeather } from "./../Components/API/serviceWeather";
-import { ICardWeather, ICities, ItemDay, IUserCities } from "./../Types/types";
+import { ICardWeather, ICities, IUserCities } from "./../Types/types";
 
 class Store {
   userCity: IUserCities = {};
@@ -57,6 +58,22 @@ class Store {
   //   получаем погоду за 7 дней опять же из координат
   getWeekWeather = async (lat: number, lon: number) => {
     const { data } = await getWeekWeather(lat, lon);
+    //time formatting from UTC UNIX in seconds
+    const format = (time: number): string => {
+      const day = new Date(time * 1e3);
+      return day.toLocaleDateString();
+    };
+    this.currentCity = data.daily.map((v: any) => ({
+      dayTemp: Math.floor(v.temp.day),
+      nightTemp: Math.floor(v.temp.night),
+      weather: v.weather[0].description,
+      icon: v.weather[0].icon,
+      day: format(v.dt),
+    }));
+  };
+  //   получаем погоду за 2 дня опять же из координат
+  getTwoDaysWeather = async (lat: number, lon: number) => {
+    const { data } = await getTwoDaysWeather(lat, lon);
     //time formatting from UTC UNIX in seconds
     const format = (time: number): string => {
       const day = new Date(time * 1e3);

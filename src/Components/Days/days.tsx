@@ -3,10 +3,14 @@ import { store } from "../../Store/store";
 import { ICities } from "../../Types/types";
 import MyButton from "./../UI/MyButton/myButton";
 import Day from "./day";
+import { Link } from "react-router-dom";
 const Days = ({ lat, lon }: ICities) => {
   useEffect(() => {
     store.getWeekWeather(lat, lon);
-  });
+  }, []);
+  useEffect(() => {
+    store.getTwoDaysWeather(lat, lon);
+  }, []);
   // const dateArray = [];
   // const date = store.date;
   // for (let i = 0; i <= 10; i++) {
@@ -19,7 +23,7 @@ const Days = ({ lat, lon }: ICities) => {
     <div className="days-div">
       <div className="header-days">
         <MyButton>on 8 days</MyButton>
-        <MyButton>on mounth</MyButton>
+        <Link to={"/TwoDays"}>2 days</Link>
         <MyButton>on 10 days</MyButton>
       </div>
       <div className="days">
