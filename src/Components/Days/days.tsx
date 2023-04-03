@@ -23,8 +23,8 @@ const Days = ({ lat, lon }: ICities) => {
     <div className="days-div">
       <div className="header-days">
         <MyButton>on 8 days</MyButton>
-        <Link to={"/TwoDays"}>2 days</Link>
         <MyButton>on 10 days</MyButton>
+        <MyButton>on mounth</MyButton>
       </div>
       <div className="days">
         {store.currentCity.map((card) => (
