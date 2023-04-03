@@ -1,9 +1,11 @@
+import TwoDays from "../Days/twoDays";
 import Login from "../Pages/Login/login";
 import Profile from "../Pages/Profile/profile";
 import StartPage from "../Pages/StartPage/startPage";
 import WeatherList from "../Pages/WeaherList/weatherList";
 export const privateRoutes = [
   { path: "/Weather", element: StartPage },
+  { path: "/TwoDays", element: TwoDays },
   { path: "/weatherList", element: WeatherList },
   { path: "/profile", element: Profile },
 ];

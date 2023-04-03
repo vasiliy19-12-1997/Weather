@@ -8,6 +8,9 @@
     display: grid;
     grid-template: 350px 1fr/1fr;
     background: var(#{--body-background-default});
+    @media (max-width: 1600px) {
+      margin: 50px;
+    }
 
     .weather-container {
       display: grid;
@@ -53,7 +56,6 @@
       background-color: var(#{--body-background-default});
       .days {
         background-color: var(#{--components-background-default});
-
         margin-top: 10px;
         display: grid;
         grid-template: 300px / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -86,11 +88,6 @@
         grid-template: 1fr/144px 144px 144px;
         gap: 15px;
       }
-    }
-  }
-  .startPage {
-    @media (max-width: 1600px) {
-      margin: 50px;
     }
   }
 }
