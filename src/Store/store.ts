@@ -38,7 +38,6 @@ class Store {
   //   получаем погоду в городе
   getCurrentCityWeather = async (city: string) => {
     const { data } = await getCurrentCityWeather(city);
-
     this.cities = [
       ...this.cities,
       {
@@ -51,6 +50,7 @@ class Store {
         icon: data.weather[0].icon,
       },
     ];
+
     localStorage.setItem("cities", JSON.stringify(this.cities));
   };
 

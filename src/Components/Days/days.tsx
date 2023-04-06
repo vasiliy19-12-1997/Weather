@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import { store } from "../../Store/store";
 import { ICities } from "../../Types/types";
-import MyButton from "./../UI/MyButton/myButton";
 import Day from "./day";
-import { Link } from "react-router-dom";
 const Days = ({ lat, lon }: ICities) => {
   useEffect(() => {
     store.getWeekWeather(lat, lon);
@@ -21,14 +19,9 @@ const Days = ({ lat, lon }: ICities) => {
 
   return (
     <div className="days-div">
-      <div className="header-days">
-        <MyButton>on 8 days</MyButton>
-        <MyButton>on 10 days</MyButton>
-        <MyButton>on mounth</MyButton>
-      </div>
       <div className="days">
-        {store.currentCity.map((card) => (
-          <Day card={card} key={card.id} />
+        {store.currentCity.map((card, index) => (
+          <Day card={card} key={index} />
         ))}
       </div>
     </div>

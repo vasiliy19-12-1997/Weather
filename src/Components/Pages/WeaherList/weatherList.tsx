@@ -12,6 +12,7 @@ const WeatherList = () => {
       store.setCities();
     }
   }, []);
+
   const cities = store.cities.map((v) => {
     return (
       <CityCard
@@ -26,6 +27,10 @@ const WeatherList = () => {
       />
     );
   });
+  const uniqueItems = cities.filter((item, index, key) => {
+    return cities.indexOf(item) !== index;
+  });
+
   return (
     <div className="weatherList">
       <form>
@@ -47,8 +52,7 @@ const WeatherList = () => {
           Find
         </MyButton>
       </form>
-      <div></div>
-      <div>{cities}</div>
+      {uniqueItems && <div>{cities}</div>}
     </div>
   );
 };

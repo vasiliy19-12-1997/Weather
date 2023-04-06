@@ -41,3 +41,4 @@ export const days = [
     weather: `${store.userCity.weather}`,
   },
 ];
+export const id = Math.random();
