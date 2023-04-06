@@ -27,8 +27,8 @@ const WeatherList = () => {
       />
     );
   });
-  const uniqueItems = cities.filter((item, index, key) => {
-    return cities.indexOf(item) !== index;
+  const uniqueItems = cities.filter((item, index) => {
+    return cities.indexOf(item) === index;
   });
 
   return (

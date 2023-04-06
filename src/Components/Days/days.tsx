@@ -6,9 +6,7 @@ const Days = ({ lat, lon }: ICities) => {
   useEffect(() => {
     store.getWeekWeather(lat, lon);
   }, []);
-  useEffect(() => {
-    store.getTwoDaysWeather(lat, lon);
-  }, []);
+
   // const dateArray = [];
   // const date = store.date;
   // for (let i = 0; i <= 10; i++) {
