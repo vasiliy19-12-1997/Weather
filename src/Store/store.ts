@@ -38,18 +38,21 @@ class Store {
   //   получаем погоду в городе
   getCurrentCityWeather = async (city: string) => {
     const { data } = await getCurrentCityWeather(city);
-    this.cities = [
-      ...this.cities,
-      {
-        city: data.name,
-        temperature: Math.floor(data.main.temp - 273.15),
-        weather: data.weather[0].description,
-        id: data.id,
-        lat: data.coord.lat,
-        lon: data.coord.lon,
-        icon: data.weather[0].icon,
-      },
-    ];
+    const obj = {
+      city: data.name,
+      temperature: Math.floor(data.main.temp - 273.15),
+      weather: data.weather[0].description,
+      id: data.id,
+      lat: data.coord.lat,
+      lon: data.coord.lon,
+      icon: data.weather[0].icon,
+    };
+    const arr1: any = Object.fromEntries(
+      Object.entries(obj).filter((val, id, array) => {
+        return array.indexOf(val) === id;
+      })
+    );
+    this.cities = [...this.cities, arr1];
 
     localStorage.setItem("cities", JSON.stringify(this.cities));
   };

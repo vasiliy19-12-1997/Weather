@@ -11,7 +11,7 @@ const WeatherList = () => {
     if (localStorage.getItem("cities")) {
       store.setCities();
     }
-  }, []);
+  }, [store.userCity.temperature]);
 
   const cities = store.cities.map((v) => {
     return (
@@ -27,9 +27,6 @@ const WeatherList = () => {
       />
     );
   });
-  const uniqueItems = cities.filter((item, index) => {
-    return cities.indexOf(item) === index;
-  });
 
   return (
     <div className="weatherList">
@@ -41,7 +38,6 @@ const WeatherList = () => {
           onChange={(e) => setCity(e.target.value)}
         ></MyInput>
 
-        {/* <WeatherCityObserver /> */}
         <MyButton
           onClick={(e) => {
             e.preventDefault();
@@ -52,7 +48,7 @@ const WeatherList = () => {
           Find
         </MyButton>
       </form>
-      {uniqueItems && <div>{cities}</div>}
+      <div>{cities}</div>
     </div>
   );
 };
