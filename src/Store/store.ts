@@ -47,13 +47,10 @@ class Store {
       lon: data.coord.lon,
       icon: data.weather[0].icon,
     };
-    const arr1: any = Object.fromEntries(
-      Object.entries(obj).filter((val, id, array) => {
-        return array.indexOf(val) === id;
-      })
-    );
-    this.cities = [...this.cities, arr1];
-
+    const index = this.cities.findIndex((city) => city.id === data.id);
+    if (index === -1) {
+      this.cities.push(obj);
+    }
     localStorage.setItem("cities", JSON.stringify(this.cities));
   };
 

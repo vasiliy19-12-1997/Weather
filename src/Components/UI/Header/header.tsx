@@ -47,11 +47,11 @@ const Header: FC = (props: Props) => {
               id={`${active ? "light-theme" : "night-theme"}`}
             />
           </div>
-          {/* <Select
+          <Select
             defaultValue={options[0]}
             styles={colourStyles}
             options={options}
-          /> */}
+          />
         </div>
       </div>
     </header>

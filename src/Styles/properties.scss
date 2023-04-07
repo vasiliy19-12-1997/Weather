@@ -6,6 +6,7 @@ $border-radius: 20px;
 $light-color: #000;
 $dark-color: #fff;
 $base-color: #939cb0;
+$light-hover-color: rgb(128, 135, 139);
 
 $body-background-dark: #0d1117;
 $body-background-light: #fff;
@@ -26,6 +27,7 @@ $card-box-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
   border: none;
   font-size: 1rem;
   border-radius: 10px;
+  transition: 0.3s ease;
 }
 :root {
   //body-background
@@ -51,5 +53,7 @@ $card-box-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
   //text
   --text-color-dark: #{$dark-color};
   --text-color-light: #{$light-color};
-  --text-color-default: var(#{--text-color-light});
+  --text-color-hover-light: #{$light-hover-color};
+  --text-color-default: var(#{var(--text-color-light)});
+  --text-color-hover-default: var(#{--text-color-hover-light});
 }

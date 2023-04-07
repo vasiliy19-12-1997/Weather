@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import { FC, useEffect, useLayoutEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useGeolocated } from "react-geolocated";
 import { store } from "../../../Store/store";
 import Days from "../../Days/days";
@@ -25,7 +25,7 @@ const StartPage: FC = () => {
     });
   }, []);
   //функция из стора, чтобы отобразить на странице
-  useLayoutEffect(() => {
+  useEffect(() => {
     store.getCurrentUserWeather(lat, lon);
     setLoading(false);
   }, [store.userCity.city]);

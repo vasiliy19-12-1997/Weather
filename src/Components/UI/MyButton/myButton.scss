@@ -1,16 +1,13 @@
+@import "../../../Styles/properties.scss";
+
 .MyButton {
   display: grid;
   grid-template-columns: auto;
   &B {
-    background-color: #4793ff;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
-    border-radius: 10px;
+    @extend %button-template;
   }
   :hover {
-    background: rgb(128, 135, 139);
+    transition: 0.3s ease;
+    background: var(#{--text-color-hover-default});
   }
 }
