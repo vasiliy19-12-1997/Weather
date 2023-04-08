@@ -10,25 +10,22 @@
     background: var(#{--body-background-default});
     justify-content: center;
 
-    @media (max-width: 1910px) {
-      grid-template-columns: 1740px;
-    }
-    @media (max-width: 1780px) {
-      grid-template-columns: 1500px;
-    }
-
-    @media (max-width: 1520px) {
-      grid-template-columns: 1200px;
-    }
-    @media (max-width: 1240px) {
-      grid-template: 1fr/1fr;
-    }
     .weather-container {
       display: grid;
       justify-content: space-between;
       grid-template: 350px / 300px 750px;
       align-content: center;
       line-height: 0px;
+      @media (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 10px 0px 10px;
+        gap: 10px;
+        justify-content: space-between;
+      }
+      @media (max-width: 570px) {
+        width: 300px;
+      }
 
       .location-info {
         background: var(#{--components-background-default});
@@ -36,6 +33,9 @@
         border: none;
         border-radius: 20px;
         padding: 5px;
+        @media (max-width: 570px) {
+          width: 300px;
+        }
 
         .info {
           display: flex;
@@ -62,10 +62,55 @@
           width: 125px;
         }
       }
+      .day-info {
+        background: var(#{--components-background-default});
+        display: flex;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        padding: 42px 0px 41px 32px;
+        box-shadow: 1px 1px 32px 2px rgba(34, 60, 80, 0.2);
+        border-radius: 20px;
+        border: none;
+
+        .card {
+          display: grid;
+          grid-template: 1fr /100px 300px 1fr;
+          align-items: center;
+          font-size: 1.2rem;
+          @media (max-width: 750px) {
+            font-size: 0.9rem;
+          }
+
+          .city {
+            color: $base-color;
+            color: var(#{--text-color-default});
+            font-weight: 200;
+          }
+          .store {
+            font-weight: 500;
+            @media (max-width: 750px) {
+              line-height: 15px;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        img {
+          position: absolute;
+          opacity: 0.5;
+          top: 0;
+          right: 0;
+          margin: 5px 5px 0px 0px;
+        }
+      }
     }
     .days-div {
       margin-top: 50px;
       background-color: var(#{--body-background-default});
+      @media (max-width: 570px) {
+        width: 300px;
+      }
       .days {
         background-color: var(#{--components-background-default});
         display: grid;
@@ -76,6 +121,12 @@
         gap: 10px;
         line-height: 20px;
         padding: 10px;
+        @media (max-width: 1200px) {
+          display: flex;
+          flex-direction: column;
+          margin-top: 350px;
+          justify-content: flex-start;
+        }
         .day {
           background-color: var(#{--card-background-default});
           border-radius: $border-radius;
@@ -84,6 +135,12 @@
             color: var(#{--text-color-default});
             font-weight: bold;
             font-size: 1.5rem;
+            @media (max-width: 1500px) {
+              font-size: 1.2rem;
+            }
+            @media (max-width: 1240px) {
+              font-size: 1rem;
+            }
           }
           .night-temp {
             font-weight: 300;

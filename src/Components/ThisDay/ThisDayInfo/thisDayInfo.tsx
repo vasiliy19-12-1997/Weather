@@ -3,7 +3,6 @@ import cloud from "../../../Assets/Images/cloud.png";
 import { store } from "../../../Store/store";
 import ThisDayItem from "../ThisDayItem/thisDayItem";
 import { ICities } from "./../../../Types/types";
-import "./thisDayInfo.scss";
 
 const ThisDayInfo = ({ lat, lon }: ICities) => {
   const [loading, setLoading] = useState(true);
