@@ -14,3 +14,8 @@ export const getWeekWeather = (lat: number, lon: number) => {
     `onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,current&units=metric&appid=${Apikey}`
   );
 };
+export const getTwoDaysWeather = (lat: number, lon: number) => {
+  return instance.get(
+    `onecall?lat=${lat}&lon=${lon}&exclude=hourly,current&units=metric&appid=${Apikey}`
+  );
+};

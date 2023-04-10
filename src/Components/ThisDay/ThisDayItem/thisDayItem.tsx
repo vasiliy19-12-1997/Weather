@@ -1,6 +1,5 @@
 import { SharedSvgSelector } from "../../../Assets/Icons/Shared/sharedSvgSelector";
 import { store } from "../../../Store/store";
-import "../ThisDayInfo/thisDayInfo.scss";
 
 const ThisDayItem = () => {
   return (

@@ -8,7 +8,7 @@
   margin-bottom: 12px;
 
   &Delete svg {
-    color: rgba(0, 0, 0, 0.25);
+    color: var(#{--text-color-default});
     height: 75px;
     width: 75px;
     transition: 0.3s ease;
@@ -16,7 +16,7 @@
   }
   &Delete:hover svg {
     transition: 0.3s ease;
-    color: rgba(0, 0, 0, 0.76);
+    color: var(#{--text-color-hover-default});
   }
   &Delete button {
     border: none;
