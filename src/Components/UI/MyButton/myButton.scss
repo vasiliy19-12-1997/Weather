@@ -3,6 +3,7 @@
 .MyButton {
   display: grid;
   grid-template-columns: auto;
+
   &B {
     @extend %button-template;
   }
