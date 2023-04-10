@@ -1,8 +1,9 @@
 import axios from "axios";
 const Apikey = "d2cda96c7881426eff7d69f04226b87b";
 const instance = axios.create({
-  baseURL: "http://api.openweathermap.org/data/2.5/",
+  baseURL: "https://api.openweathermap.org/data/2.5/",
 });
+
 export const getCurrentUserWeather = (lat: number, lon: number) => {
   return instance.get(`weather?lat=${lat}&lon=${lon}&appid=${Apikey}`);
 };
