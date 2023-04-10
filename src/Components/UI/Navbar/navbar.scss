@@ -19,9 +19,13 @@
       @extend %button-template;
       text-decoration: none;
     }
+    :hover {
+      transition: 0.3s ease;
+      background: var(#{--text-color-hover-default});
+    }
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 570px) {
   .burger-menu-container {
     padding-top: 5px;
     position: relative;
@@ -61,36 +65,37 @@
         }
       }
     }
+    @media (max-width: 570px) {
+      .menu-items {
+        position: absolute;
+        top: 0;
+        right: 0;
+        &.open {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 50vh;
+          background-color: rgba(0, 0, 0, 0.8);
+          width: 70%;
+          color: #fff;
+          transition: transform 0.5s ease;
+        }
+        &.close {
+          display: none;
+        }
 
-    .menu-items {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.8);
-      width: 70%;
-      color: #fff;
-      transform: translateX(100%);
-      transition: transform 0.5s ease;
+        button {
+          margin: 20px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fff;
+          text-decoration: none;
+          transition: opacity 0.2s ease;
 
-      &.open {
-        transform: translateX(0);
-      }
-
-      button {
-        margin: 20px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff;
-        text-decoration: none;
-        transition: opacity 0.2s ease;
-
-        &:hover {
-          opacity: 0.7;
+          &:hover {
+            opacity: 0.7;
+          }
         }
       }
     }

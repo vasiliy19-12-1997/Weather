@@ -41,7 +41,6 @@
           display: flex;
           justify-content: center;
           align-items: center;
-
           .temperature {
             font-size: 80px;
             font-weight: bold;
@@ -71,7 +70,6 @@
         box-shadow: 1px 1px 32px 2px rgba(34, 60, 80, 0.2);
         border-radius: 20px;
         border: none;
-
         .card {
           display: grid;
           grid-template: 1fr /100px 300px 1fr;
@@ -112,12 +110,14 @@
       }
     }
     .days-div {
-      margin-top: 50px;
+      margin-top: 60px;
       background-color: var(#{--body-background-default});
-
+      @media (max-width: 1200px) {
+        margin-top: 370px;
+      }
       @media (max-width: 570px) {
         display: grid;
-        grid-template: 1fr /300px;
+        grid-template: 1fr 0px /300px;
         justify-content: center;
       }
 
@@ -134,7 +134,7 @@
         @media (max-width: 1200px) {
           display: flex;
           flex-direction: column;
-          margin-top: 350px;
+          margin-top: 10px;
           justify-content: flex-start;
         }
 
