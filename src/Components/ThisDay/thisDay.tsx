@@ -9,7 +9,7 @@ const ThisDay = ({ lat, lon }: ICities) => {
         <div className="info">
           <p className="temperature">{store.userCity.temperature}°</p>
           <img
-            src={`http://openweathermap.org/img/wn/${store.userCity.icon}@2x.png`}
+            src={`https://openweathermap.org/img/wn/${store.userCity.icon}@2x.png`}
             alt="weather-icon"
             className="weather-icon"
           />
@@ -17,7 +17,7 @@ const ThisDay = ({ lat, lon }: ICities) => {
         <div className="text">
           <p className="date">{store.date.toLocaleDateString()}</p>
           <p className="weather-description"> {store.userCity.weather}</p>
-          <p className="city">City: {store.userCity.city}</p>
+          <p className="city">{store.userCity.city}</p>
         </div>
       </div>
       <ThisDayInfo lat={lat} lon={lon} />

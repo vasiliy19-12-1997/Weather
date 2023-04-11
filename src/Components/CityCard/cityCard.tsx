@@ -19,7 +19,10 @@ const CityCard: FC<ICities> = ({
         <p>{city} </p>
         <p> {weather}</p>
         <p>
-          <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
+          <img
+            src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+            alt=""
+          />
         </p>
         <p>{temperature}°C</p>
       </div>

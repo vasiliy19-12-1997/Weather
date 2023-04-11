@@ -1,29 +1,39 @@
 @import "../../../Styles/properties.scss";
 .container {
-  background: var(#{--body-background-default});
   .app-router {
-    margin: 20px;
+    margin: 0px 20px 0px 20px;
   }
   .startPage {
     display: grid;
     grid-template: 350px 1fr/1fr;
     background: var(#{--body-background-default});
-    @media (max-width: 1600px) {
-      margin: 50px;
-    }
-
+    justify-content: center;
     .weather-container {
+      padding: 0px 20px 0px 20px;
       display: grid;
       justify-content: space-between;
       grid-template: 350px / 300px 750px;
       align-content: center;
       line-height: 0px;
+      @media (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 10px 0px 10px;
+        gap: 10px;
+        justify-content: space-between;
+      }
+      @media (max-width: 570px) {
+        margin-top: 350px;
+        display: grid;
+        grid-template: 1fr 1fr/ 300px;
+        justify-content: center;
+      }
 
       .location-info {
         background: var(#{--components-background-default});
         box-shadow: 1px 1px 32px 2px rgba(34, 60, 80, 0.2);
         border: none;
-        border-radius: 20px; // justify-content: center;
+        border-radius: 20px;
         padding: 5px;
 
         .info {
@@ -50,28 +60,102 @@
           width: 125px;
         }
       }
+      .day-info {
+        background: var(#{--components-background-default});
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        padding: 42px 0px 41px 32px;
+        box-shadow: 1px 1px 32px 2px rgba(34, 60, 80, 0.2);
+        border-radius: 20px;
+        border: none;
+        .card {
+          display: grid;
+          grid-template: 1fr /100px 300px 1fr;
+          align-items: center;
+          font-size: 1.2rem;
+          @media (max-width: 570px) {
+            justify-items: center;
+            grid-template: 1fr /0px 150px 1fr;
+          }
+          @media (max-width: 750px) {
+            font-size: 0.9rem;
+          }
+
+          .city {
+            color: $base-color;
+            color: var(#{--text-color-default});
+            font-weight: 200;
+          }
+          .store {
+            font-weight: 500;
+            @media (max-width: 750px) {
+              line-height: 15px;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        img {
+          position: absolute;
+          opacity: 0.5;
+          top: 0;
+          right: 0;
+          margin: 5px 5px 0px 0px;
+          @media (max-width: 570px) {
+            width: 200px;
+          }
+        }
+      }
     }
     .days-div {
-      margin-top: 50px;
+      margin-top: 60px;
+      padding-bottom: 5px;
+
       background-color: var(#{--body-background-default});
+      @media (max-width: 1200px) {
+        margin-top: 370px;
+      }
+      @media (max-width: 570px) {
+        display: grid;
+        grid-template: 1fr 0px /300px;
+        justify-content: center;
+      }
+
       .days {
         background-color: var(#{--components-background-default});
-        margin-top: 10px;
         display: grid;
-        grid-template: 300px / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template: 350px / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         box-shadow: $box-shadow;
         border-radius: $border-radius;
         padding: 20px;
         gap: 10px;
         line-height: 20px;
+        padding: 10px;
+        @media (max-width: 1200px) {
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px;
+          justify-content: flex-start;
+        }
+
         .day {
           background-color: var(#{--card-background-default});
           border-radius: $border-radius;
-          padding: 20px;
+          text-align: center;
           .day-temp {
-            // color: var(#{--text-color-default});
+            color: var(#{--text-color-default});
             font-weight: bold;
             font-size: 1.5rem;
+            @media (max-width: 1780px) {
+              font-size: 1.3rem;
+            }
+            @media (max-width: 1500px) {
+              font-size: 1.2rem;
+            }
+            @media (max-width: 1240px) {
+              font-size: 1rem;
+            }
           }
           .night-temp {
             font-weight: 300;

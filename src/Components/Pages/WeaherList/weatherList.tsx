@@ -11,7 +11,8 @@ const WeatherList = () => {
     if (localStorage.getItem("cities")) {
       store.setCities();
     }
-  }, []);
+  }, [store.userCity.temperature]);
+
   const cities = store.cities.map((v) => {
     return (
       <CityCard
@@ -26,6 +27,7 @@ const WeatherList = () => {
       />
     );
   });
+
   return (
     <div className="weatherList">
       <form>
@@ -36,7 +38,6 @@ const WeatherList = () => {
           onChange={(e) => setCity(e.target.value)}
         ></MyInput>
 
-        {/* <WeatherCityObserver /> */}
         <MyButton
           onClick={(e) => {
             e.preventDefault();
@@ -47,7 +48,6 @@ const WeatherList = () => {
           Find
         </MyButton>
       </form>
-      <div></div>
       <div>{cities}</div>
     </div>
   );
