@@ -5,6 +5,7 @@ import MyInput from "../../UI/MyInput/myInput";
 import CityCard from "../../CityCard/cityCard";
 import MyButton from "../../UI/MyButton/myButton";
 import "./weatherList.scss";
+import { Link } from "react-router-dom";
 const WeatherList = () => {
   const [city, setCity] = useState("");
   useEffect(() => {
