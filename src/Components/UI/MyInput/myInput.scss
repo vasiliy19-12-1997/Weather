@@ -5,6 +5,7 @@
   margin: 20px 0px 5px 0px;
   @media (max-width: 570px) {
     grid-template-columns: 210px;
+    justify-content: center;
   }
   &I {
     height: 40px;

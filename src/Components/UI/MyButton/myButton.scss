@@ -3,7 +3,10 @@
 .MyButton {
   display: grid;
   grid-template-columns: auto;
-
+  @media (max-width: 570px) {
+    grid-template-columns: 210px;
+    justify-content: center;
+  }
   &B {
     @extend %button-template;
   }
