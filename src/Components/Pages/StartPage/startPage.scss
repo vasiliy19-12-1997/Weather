@@ -1,16 +1,15 @@
 @import "../../../Styles/properties.scss";
 .container {
-  background: var(#{--body-background-default});
   .app-router {
-    margin: 20px;
+    margin: 0px 20px 0px 20px;
   }
   .startPage {
     display: grid;
     grid-template: 350px 1fr/1fr;
     background: var(#{--body-background-default});
     justify-content: center;
-
     .weather-container {
+      padding: 0px 20px 0px 20px;
       display: grid;
       justify-content: space-between;
       grid-template: 350px / 300px 750px;
@@ -111,6 +110,8 @@
     }
     .days-div {
       margin-top: 60px;
+      padding-bottom: 5px;
+
       background-color: var(#{--body-background-default});
       @media (max-width: 1200px) {
         margin-top: 370px;
@@ -146,6 +147,9 @@
             color: var(#{--text-color-default});
             font-weight: bold;
             font-size: 1.5rem;
+            @media (max-width: 1780px) {
+              font-size: 1.3rem;
+            }
             @media (max-width: 1500px) {
               font-size: 1.2rem;
             }

@@ -4,7 +4,6 @@ import {
   getCurrentUserWeather,
   getTwoDaysWeather,
 } from "../Components/API/serviceWeather";
-// import { items } from "../Types/enums";
 import { getWeekWeather } from "./../Components/API/serviceWeather";
 import { ICardWeather, ICities, IUserCities } from "./../Types/types";
 
@@ -74,7 +73,6 @@ class Store {
   //   получаем погоду за 2 дня опять же из координат
   getTwoDaysWeather = async (lat: number, lon: number) => {
     const { data } = await getTwoDaysWeather(lat, lon);
-    //time formatting from UTC UNIX in seconds
     const format = (time: number): string => {
       const day = new Date(time * 1e3);
       return day.toLocaleDateString();

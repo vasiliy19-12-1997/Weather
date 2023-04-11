@@ -9,10 +9,14 @@
 
   &Delete svg {
     color: var(#{--text-color-default});
-    height: 75px;
-    width: 75px;
+    height: 65px;
+    width: 65px;
     transition: 0.3s ease;
     cursor: pointer;
+    @media (max-width: 1060px) {
+      height: 45px;
+      width: 45px;
+    }
   }
   &Delete:hover svg {
     transition: 0.3s ease;
@@ -23,8 +27,17 @@
     background: transparent;
   }
   & p {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: normal;
     margin-right: 12px;
+    @media (max-width: 1780px) {
+      font-size: 1.3rem;
+    }
+    @media (max-width: 1500px) {
+      font-size: 1.2rem;
+    }
+    @media (max-width: 1240px) {
+      font-size: 1rem;
+    }
   }
 }

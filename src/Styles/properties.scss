@@ -1,5 +1,5 @@
 $primary-color: #4793ff;
-$light-background: #fff;
+$light-background: rgba(#eee, 0.3);
 $box-shadow: 1px 1px 32px 2px rgba(34, 60, 80, 0.2);
 $border-radius: 20px;
 
@@ -9,7 +9,7 @@ $base-color: #939cb0;
 $light-hover-color: rgb(128, 135, 139);
 
 $body-background-dark: #0d1117;
-$body-background-light: #fff;
+$body-background-light: rgba(#eee, 0.3);
 
 $components-background-dark: #4f4f4f;
 $components-background-light: #fff;
@@ -25,9 +25,17 @@ $card-box-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
   padding: 0.5rem 0.8rem;
   cursor: pointer;
   border: none;
-  font-size: 1rem;
   border-radius: 10px;
   transition: 0.3s ease;
+  @media (max-width: 1780px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 1500px) {
+    font-size: 0.9rem;
+  }
+  @media (max-width: 1240px) {
+    font-size: 0.8rem;
+  }
 }
 :root {
   //body-background
