@@ -8,6 +8,14 @@ const Checkbox = (props: CheckboxProps) => {
   const handleCheck = () => {
     setIsChecked(!isChecked);
   };
+
+  function cat(i: string) {
+    const x = "al";
+    function say() {
+      const x = "Sy";
+      return x + i;
+    }
+  }
   return (
     <label className="checkbox">
       <input type="checkbox" checked={isChecked} onChange={handleCheck} />
