@@ -4,15 +4,7 @@ import { store } from "../../Store/store";
 import { ICities } from "../../Types/types";
 import "./cityCard.scss";
 
-const CityCard: FC<ICities> = ({
-  id,
-  city,
-  weather,
-  temperature,
-  icon,
-  lat,
-  lon,
-}) => {
+const CityCard: FC<ICities> = ({ id, city, weather, temperature, icon }) => {
   return (
     <div className="cityCard">
       <div key={id}>
@@ -29,6 +21,7 @@ const CityCard: FC<ICities> = ({
 
       <div className="cityCardDelete">
         <button onClick={() => store.deleteCities(id)}>
+          {/* вынести svg */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"

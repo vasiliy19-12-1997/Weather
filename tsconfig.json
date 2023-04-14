@@ -16,5 +16,10 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "d.ts"]
+  "include": ["src", "d.ts"],
+  "plugins": [
+    {
+      "name": "typescript-plugin-css-modules"
+    }
+  ]
 }

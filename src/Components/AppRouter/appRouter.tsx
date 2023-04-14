@@ -5,13 +5,12 @@ import { IAuth } from "../../Types/types";
 import { privateRoutes, publicRoutes } from "./../Router/router";
 
 const AppRouter: FC = () => {
-  const { isAuth, setIsAuth } = useContext(AuthContext) as IAuth;
+  const isAuth = useContext(AuthContext) as IAuth;
   return isAuth ? (
     <Routes>
       {privateRoutes.map((route) => (
         <Route element={<route.element />} path={route.path} key={route.path} />
       ))}
-      {/* если пользователь введет не существующий url, то перейдем к туду листу */}
       <Route path="/*" element={<Navigate to="/Weather" replace />} />
     </Routes>
   ) : (
@@ -19,7 +18,6 @@ const AppRouter: FC = () => {
       {publicRoutes.map((route) => (
         <Route element={<route.element />} path={route.path} key={route.path} />
       ))}
-      {/* если пользователь введет не существующий url, то перейдем к login листу */}
       <Route path="/*" element={<Navigate to="/login" replace />} />
     </Routes>
   );

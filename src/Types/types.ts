@@ -12,7 +12,8 @@ export interface IUserCities {
   wind?: number;
 }
 export interface ICities extends IUserCities {
-  lat: number; //широта
+  /**широта */
+  lat: number;
   lon: number; //долгота
   id?: number;
 }
