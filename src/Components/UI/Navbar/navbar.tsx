@@ -35,13 +35,11 @@ const Navbar: FC = () => {
           <Link className="Link" to={"/Weather"}>
             Weather
           </Link>
-          <MyButton onClick={() => navigate("/weatherList")}>
-            Search city
-          </MyButton>
+          <button onClick={() => navigate("/weatherList")}>Search city</button>
           <Link to={"https://vasiliy19-12-1997.github.io/profile/"}>
             Profile
           </Link>
-          <MyButton onClick={logOut}>Log out</MyButton>
+          <button onClick={logOut}>Log out</button>
         </div>
       </div>
     </>
