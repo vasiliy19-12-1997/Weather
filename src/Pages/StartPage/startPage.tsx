@@ -1,10 +1,11 @@
 import { observer } from "mobx-react-lite";
 import { FC, useEffect, useState } from "react";
 import { useGeolocated } from "react-geolocated";
-import { store } from "../../../Store/store";
-import Days from "../../Days/days";
-import ThisDay from "../../ThisDay/thisDay";
 import "./startPage.scss";
+import { store } from "../../Store/store";
+import ThisDay from "../../Components/ThisDay/thisDay";
+import Days from "../../Components/Days/days";
+
 const StartPage: FC = () => {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
@@ -16,7 +17,6 @@ const StartPage: FC = () => {
       },
       userDecisionTimeout: 5000,
     });
-  //получаем текущий город пользователя
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((pos) => {
       setLat(pos.coords.latitude);
@@ -24,7 +24,6 @@ const StartPage: FC = () => {
       setLoading(false);
     });
   }, []);
-  //функция из стора, чтобы отобразить на странице
   useEffect(() => {
     store.getCurrentUserWeather(lat, lon);
     setLoading(false);

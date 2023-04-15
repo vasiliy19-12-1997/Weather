@@ -1,45 +1,30 @@
-import { observer } from "mobx-react-lite";
 import { FC } from "react";
+import { SharedSvgSelector } from "../../Assets/Icons/Shared/sharedSvgSelector";
 import { store } from "../../Store/store";
 import { ICities } from "../../Types/types";
 import "./cityCard.scss";
 
-const CityCard: FC<ICities> = ({ id, city, weather, temperature, icon }) => {
+const CityCard: FC<ICities> = (props: ICities) => {
   return (
     <div className="cityCard">
-      <div key={id}>
-        <p>{city} </p>
-        <p> {weather}</p>
+      <div key={props.id}>
+        <p>{props.city} </p>
+        <p> {props.weather}</p>
         <p>
           <img
-            src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+            src={`https://openweathermap.org/img/wn/${props.icon}@2x.png`}
             alt=""
           />
         </p>
-        <p>{temperature}°C</p>
+        <p>{props.temperature}°C</p>
       </div>
-
       <div className="cityCardDelete">
-        <button onClick={() => store.deleteCities(id)}>
-          {/* вынести svg */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+        <button onClick={() => store.deleteCities(props.id)}>
+          <SharedSvgSelector id="delete" />
         </button>
       </div>
     </div>
   );
 };
 
-export default observer(CityCard);
+export default CityCard;

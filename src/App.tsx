@@ -5,7 +5,8 @@ import Header from "./Components/UI/Header/header";
 import Navbar from "./Components/UI/Navbar/navbar";
 import { AuthContext } from "./Context/context";
 import { ThemeProvider } from "./Context/themeProvider";
-function App() {
+
+const App = () => {
   const [isAuth, setIsAuth] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -31,6 +32,6 @@ function App() {
       </AuthContext.Provider>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

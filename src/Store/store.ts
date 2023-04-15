@@ -6,7 +6,6 @@ import {
 } from "../Components/API/serviceWeather";
 import { getWeekWeather } from "./../Components/API/serviceWeather";
 import { ICardWeather, ICities, IUserCities } from "./../Types/types";
-
 class Store {
   userCity: IUserCities = {};
   cities: ICities[] = [];
@@ -15,7 +14,6 @@ class Store {
   constructor() {
     makeAutoObservable(this);
   }
-  //   получаем погоду в городе пользователя из его местоположения(долгота + ширина)
 
   getCurrentUserWeather = async (lat: number, lon: number) => {
     const { data } = await getCurrentUserWeather(lat, lon);
@@ -34,7 +32,7 @@ class Store {
       wind: data.wind.speed,
     };
   };
-  //   получаем погоду в городе
+
   getCurrentCityWeather = async (city: string) => {
     const { data } = await getCurrentCityWeather(city);
     const obj = {
@@ -53,8 +51,6 @@ class Store {
     localStorage.setItem("cities", JSON.stringify(this.cities));
   };
 
-  //
-  //   получаем погоду за 7 дней опять же из координат
   getWeekWeather = async (lat: number, lon: number) => {
     const { data } = await getWeekWeather(lat, lon);
     //time formatting from UTC UNIX in seconds
@@ -70,7 +66,7 @@ class Store {
       day: format(v.dt),
     }));
   };
-  //   получаем погоду за 2 дня опять же из координат
+
   getTwoDaysWeather = async (lat: number, lon: number) => {
     const { data } = await getTwoDaysWeather(lat, lon);
     const format = (time: number): string => {
@@ -89,6 +85,7 @@ class Store {
   setCities() {
     this.cities = JSON.parse(localStorage.getItem("cities") || "{}");
   }
+
   deleteCities(id: number | undefined) {
     this.cities = this.cities.filter((city) => city.id !== id);
     localStorage.setItem("cities", JSON.stringify(this.cities));

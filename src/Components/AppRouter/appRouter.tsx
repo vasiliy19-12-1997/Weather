@@ -5,7 +5,7 @@ import { IAuth } from "../../Types/types";
 import { privateRoutes, publicRoutes } from "./../Router/router";
 
 const AppRouter: FC = () => {
-  const isAuth = useContext(AuthContext) as IAuth;
+  const { isAuth } = useContext(AuthContext) as IAuth;
   return isAuth ? (
     <Routes>
       {privateRoutes.map((route) => (

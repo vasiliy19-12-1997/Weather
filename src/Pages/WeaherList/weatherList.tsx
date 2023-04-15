@@ -1,11 +1,11 @@
 import { observer } from "mobx-react-lite";
 import { useEffect, useState } from "react";
-import { store } from "../../../Store/store";
-import MyInput from "../../UI/MyInput/myInput";
-import CityCard from "../../CityCard/cityCard";
-import MyButton from "../../UI/MyButton/myButton";
+import CityCard from "../../Components/CityCard/cityCard";
+import MyButton from "../../Components/UI/MyButton/myButton";
+import MyInput from "../../Components/UI/MyInput/myInput";
+import { store } from "../../Store/store";
 import "./weatherList.scss";
-import { Link } from "react-router-dom";
+
 const WeatherList = () => {
   const [city, setCity] = useState("");
   useEffect(() => {

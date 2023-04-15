@@ -1,11 +1,10 @@
-import { FC, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Context/context";
 import { IAuth } from "../../../Types/types";
 import "./navbar.scss";
-import MyButton from "../MyButton/myButton";
 
-const Navbar: FC = () => {
+const Navbar = () => {
   const { setIsAuth } = useContext(AuthContext) as IAuth;
   const navigate = useNavigate();
   const logOut = (e: React.MouseEvent<HTMLButtonElement>) => {

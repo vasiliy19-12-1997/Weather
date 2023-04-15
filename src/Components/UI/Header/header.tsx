@@ -1,17 +1,16 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import { SharedSvgSelector } from "../../../Assets/Icons/Shared/sharedSvgSelector";
 import { Theme } from "../../../Context/context";
 import { useTheme } from "../../Hooks/useTheme";
 import "./header.scss";
-type Props = {};
 
-const Header: FC = (props: Props) => {
+const Header = () => {
   const theme = useTheme();
   const [active, setActive] = useState(true);
-  function changeTheme() {
+  const changeTheme = () => {
     theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
     setActive(!active);
-  }
+  };
   return (
     <header>
       <div className="header">

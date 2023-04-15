@@ -14,7 +14,8 @@ export interface IUserCities {
 export interface ICities extends IUserCities {
   /**широта */
   lat: number;
-  lon: number; //долгота
+  /**долгота */
+  lon: number;
   id?: number;
 }
 export interface ICardWeather extends IUserCities, ItemDay, ICities {

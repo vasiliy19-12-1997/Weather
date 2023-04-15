@@ -1,11 +1,12 @@
 import { FC, useContext, useState } from "react";
-import { AuthContext } from "../../../Context/context";
-import { IAuth } from "../../../Types/types";
-import MyButton from "../../UI/MyButton/myButton";
-import MyInput from "./../../UI/MyInput/myInput";
 import "./login.scss";
+import { AuthContext } from "../../Context/context";
+import { IAuth } from "../../Types/types";
+import MyInput from "../../Components/UI/MyInput/myInput";
+import MyButton from "../../Components/UI/MyButton/myButton";
+
 const Login: FC = () => {
-  const { isAuth, setIsAuth } = useContext(AuthContext) as IAuth;
+  const { setIsAuth } = useContext(AuthContext) as IAuth;
   const [admin, setAdmin] = useState("");
   const [password, setPassword] = useState("");
 
@@ -22,6 +23,7 @@ const Login: FC = () => {
       localStorage.setItem("auth", "true");
     }
   };
+
   return (
     <div className="Login">
       <h1 style={{ display: "flex", justifyContent: "center" }}>Sign in </h1>
