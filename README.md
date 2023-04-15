@@ -3,8 +3,11 @@ Weather (React + Typescript + MobX) ☀
 
 **Weather**  prototype written in Typescript + React + SASS  built with [MobX].
 
+
 👉  **Try it out: [Weather](https://vasiliy19-12-1997.github.io/Weather)**  👈
 
+login: admin, 
+password: 111
 
 **Sign in**
 &nbsp;<br />
