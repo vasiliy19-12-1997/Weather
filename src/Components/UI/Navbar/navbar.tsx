@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Context/context";
 import { IAuth } from "../../../Types/types";
 import "./navbar.scss";
@@ -31,13 +31,9 @@ const Navbar = () => {
         </div>
 
         <div className={`menu-items ${menuOpen ? "open" : "close"}`}>
-          <Link className="Link" to={"/Weather"}>
-            Weather
-          </Link>
+          <button onClick={() => navigate("/Weather")}>Weather</button>
           <button onClick={() => navigate("/weatherList")}>Search city</button>
-          <Link to={"https://vasiliy19-12-1997.github.io/profile/"}>
-            Profile
-          </Link>
+          <a href="https://vasiliy19-12-1997.github.io/profile/">Profile</a>
           <button onClick={logOut}>Log out</button>
         </div>
       </div>

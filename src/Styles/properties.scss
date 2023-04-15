@@ -27,18 +27,15 @@ $card-box-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
   border: none;
   border-radius: 10px;
   transition: 0.3s ease;
-  font-size: 1.5rem;
-  @media (max-width: 1910px) {
-    font-size: 1.4rem;
-  }
+  font-size: 1.2rem;
   @media (max-width: 1780px) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   @media (max-width: 1500px) {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   @media (max-width: 1240px) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 :root {
